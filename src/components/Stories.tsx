@@ -18,6 +18,7 @@ import {
   Select,
   Textarea,
 } from './ui/primitives';
+import { ResourceList } from './ResourceList';
 
 export function Stories() {
   const stories = useLiveQuery(() => db.stories.toArray(), []) ?? [];
@@ -205,6 +206,12 @@ function StoryEditor({
             ))}
           </div>
         </Field>
+        <div className="space-y-2 border-t border-zinc-200 pt-3 dark:border-zinc-800">
+          <div className="text-xs font-medium uppercase tracking-wide text-zinc-500">
+            Resources for this category
+          </div>
+          <ResourceList keys={[`behavioral.${category}`, 'behavioral.framework']} variant="compact" />
+        </div>
       </div>
     </Modal>
   );

@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { db } from '../data/db';
-import { getResource, PLAN } from '../data/seed';
+import { PLAN } from '../data/seed';
 import { todayISO } from '../lib/dayIndex';
 import { Button, Badge, Card, CardContent, CardHeader, CardTitle } from './ui/primitives';
+import { ResourceList } from './ResourceList';
 import { DSALogModal } from './QuickLog/DSALogModal';
 import { SDLogModal } from './QuickLog/SDLogModal';
 import { BehavioralLogModal } from './QuickLog/BehavioralLogModal';
@@ -69,8 +70,8 @@ export function Today({ dayIndex }: Props) {
   const hh = Math.floor(totalLoggedMinutes / 60);
   const mm = totalLoggedMinutes % 60;
 
-  const dsaResource = getResource(`dsa.${todayPlan.targets.dsa.patterns[0]}`);
-  const sdResource = getResource(todayPlan.targets.sdOrAi.resourceKey);
+  const dsaResourceKeys = todayPlan.targets.dsa.patterns.map((p) => `dsa.${p}`);
+  const sdResourceKey = todayPlan.targets.sdOrAi.resourceKey;
 
   const trackBadge = todayPlan.targets.sdOrAi.track === 'ai_infra' ? 'AI Infra' : 'System Design';
 
@@ -105,9 +106,7 @@ export function Today({ dayIndex }: Props) {
             `${todayPlan.targets.dsa.problemCount} problems · ${todayPlan.targets.dsa.patterns.join(', ')}`,
             `Target: ${todayPlan.targets.dsa.targetMinutes} min/problem`,
           ]}
-          resourceTitle={dsaResource?.resources?.[0]?.title}
-          resourceUrl={dsaResource?.resources?.[0]?.url}
-          conceptSummary={dsaResource?.conceptSummary}
+          resourceKeys={dsaResourceKeys}
           actionLabel="+ Problem"
           onAction={() => setShowDSA(true)}
         />
@@ -118,9 +117,7 @@ export function Today({ dayIndex }: Props) {
             todayPlan.targets.sdOrAi.topic,
             `Mode: ${todayPlan.targets.sdOrAi.mode}`,
           ]}
-          resourceTitle={sdResource?.resources?.[0]?.title}
-          resourceUrl={sdResource?.resources?.[0]?.url}
-          conceptSummary={sdResource?.conceptSummary}
+          resourceKeys={sdResourceKey ? [sdResourceKey] : []}
           actionLabel="+ Design"
           onAction={() => setShowSD(true)}
         />
@@ -128,6 +125,7 @@ export function Today({ dayIndex }: Props) {
           title="Behavioral"
           headerBadge={behCount > 0 ? `${behCount} logged` : undefined}
           lines={[todayPlan.targets.behavioral.task]}
+          resourceKeys={['behavioral.framework']}
           actionLabel="+ Story"
           onAction={() => setShowBeh(true)}
         />
@@ -191,18 +189,14 @@ function TargetCard({
   lines,
   actionLabel,
   onAction,
-  resourceTitle,
-  resourceUrl,
-  conceptSummary,
+  resourceKeys,
 }: {
   title: string;
   headerBadge?: string;
   lines: string[];
   actionLabel: string;
   onAction: () => void;
-  resourceTitle?: string;
-  resourceUrl?: string;
-  conceptSummary?: string;
+  resourceKeys?: string[];
 }) {
   return (
     <Card>
@@ -216,18 +210,8 @@ function TargetCard({
             <li key={i}>{l}</li>
           ))}
         </ul>
-        {conceptSummary ? (
-          <p className="text-sm leading-relaxed text-zinc-600 dark:text-zinc-500">{conceptSummary}</p>
-        ) : null}
-        {resourceTitle && resourceUrl ? (
-          <a
-            href={resourceUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center text-base font-medium text-sky-700 hover:text-sky-900 dark:text-sky-400 dark:hover:text-sky-300"
-          >
-            → {resourceTitle}
-          </a>
+        {resourceKeys && resourceKeys.length > 0 ? (
+          <ResourceList keys={resourceKeys} variant="compact" />
         ) : null}
         <div className="pt-1">
           <Button onClick={onAction} variant="subtle">{actionLabel}</Button>

@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { db } from '../data/db';
-import { PLAN, getResource } from '../data/seed';
+import { PLAN } from '../data/seed';
 import type { DSAEntry, SDEntry, BehavioralEntry, MockEntry, DayLog } from '../types';
 import { Badge, Card, CardContent, CardHeader, CardTitle, Modal } from './ui/primitives';
+import { ResourceList } from './ResourceList';
 
 const PHASE_TONES: Record<number, 'success' | 'info' | 'warn' | 'danger'> = {
   1: 'info',
@@ -90,7 +91,8 @@ export function PlanView({ currentDayIndex }: Props) {
 function DayDetailModal({ selectedDayIndex, onClose }: { selectedDayIndex: number | null; onClose: () => void }) {
   const day = selectedDayIndex != null ? PLAN.days.find((d) => d.dayIndex === selectedDayIndex) : undefined;
   const phase = day ? PLAN.phases.find((p) => p.id === day.phaseId) : undefined;
-  const sdResource = getResource(day?.targets.sdOrAi.resourceKey);
+  const sdResourceKey = day?.targets.sdOrAi.resourceKey;
+  const dsaResourceKeys = day ? day.targets.dsa.patterns.map((p) => `dsa.${p}`) : [];
 
   const dsaLogs = useLiveQuery<DSAEntry[]>(
     () => (selectedDayIndex ? db.dsaEntries.where('dayIndex').equals(selectedDayIndex).toArray() : []),
@@ -126,27 +128,19 @@ function DayDetailModal({ selectedDayIndex, onClose }: { selectedDayIndex: numbe
             <div className="text-xs uppercase tracking-wider text-zinc-500">Phase</div>
             <div className="text-zinc-800 dark:text-zinc-200">{phase?.name}</div>
           </div>
-          <div>
+          <div className="space-y-2">
             <div className="text-xs uppercase tracking-wider text-zinc-500">DS&A</div>
             <div className="text-zinc-800 dark:text-zinc-200">
               {day.targets.dsa.problemCount} problems · {day.targets.dsa.patterns.join(', ')} · target {day.targets.dsa.targetMinutes}m
             </div>
+            <ResourceList keys={dsaResourceKeys} variant="compact" />
           </div>
-          <div>
+          <div className="space-y-2">
             <div className="text-xs uppercase tracking-wider text-zinc-500">
               {day.targets.sdOrAi.track === 'ai_infra' ? 'AI Infra' : 'System Design'} ({day.targets.sdOrAi.mode})
             </div>
             <div className="text-zinc-800 dark:text-zinc-200">{day.targets.sdOrAi.topic}</div>
-            {sdResource?.resources?.[0] && (
-              <a
-                href={sdResource.resources[0].url}
-                target="_blank"
-                rel="noreferrer"
-                className="text-sky-700 hover:text-sky-900 dark:text-sky-400 dark:hover:text-sky-300"
-              >
-                → {sdResource.resources[0].title}
-              </a>
-            )}
+            <ResourceList keys={sdResourceKey ? [sdResourceKey] : []} variant="compact" />
           </div>
           <div>
             <div className="text-xs uppercase tracking-wider text-zinc-500">Behavioral</div>
