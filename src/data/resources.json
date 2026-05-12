@@ -1,0 +1,1174 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "philosophy": "Curated, opinionated picks. 1-3 resources per topic. If a link is dead, replace it; do not add a fourth.",
+    "lastUpdated": "2026-05-08"
+  },
+  "entries": {
+    "dsa.arrays": {
+      "conceptSummary": "Arrays/hashmaps are the most common interview pattern (~35% of problems). Master prefix sums, frequency counters, and the array-as-hashmap trick (using indices as keys for O(1) lookups).",
+      "resources": [
+        {
+          "title": "NeetCode 150 — Arrays & Hashing",
+          "url": "https://neetcode.io/roadmap",
+          "type": "problem_set",
+          "cost": "free",
+          "estimatedMinutes": 600,
+          "whyThisOne": "Best-curated starting list. The 9 problems here cover the core patterns. Watch the videos when stuck."
+        },
+        {
+          "title": "Sean Prashad's LeetCode Patterns",
+          "url": "https://seanprashad.com/leetcode-patterns/",
+          "type": "problem_set",
+          "cost": "free",
+          "whyThisOne": "Patterns view, not problem-by-problem. Useful when you want to drill one specific pattern."
+        }
+      ]
+    },
+    "dsa.hashmaps": {
+      "conceptSummary": "Hashmaps trade space for time. Recognize them when the problem mentions 'find pair', 'count frequency', 'detect duplicate', or asks for O(1) lookup.",
+      "resources": [
+        {
+          "title": "NeetCode 150 — Arrays & Hashing",
+          "url": "https://neetcode.io/roadmap",
+          "type": "problem_set",
+          "cost": "free",
+          "whyThisOne": "Same list as arrays — they're paired."
+        }
+      ]
+    },
+    "dsa.two_pointers": {
+      "conceptSummary": "Two pointers reduce nested loops to linear time. Use when the array is sorted, when looking for pairs/triplets, or when shrinking/expanding a window.",
+      "resources": [
+        {
+          "title": "NeetCode — Two Pointers playlist",
+          "url": "https://www.youtube.com/playlist?list=PLot-Xpze53le8BVWvD3v4l1pCwgNxJfRz",
+          "type": "video",
+          "cost": "free",
+          "whyThisOne": "Visual explanations. Watch one before solving the corresponding problem."
+        }
+      ]
+    },
+    "dsa.sliding_window": {
+      "conceptSummary": "Sliding window solves substring/subarray problems in O(n). Two flavors: fixed-size (easy) and variable-size (hard — track window state with a hashmap).",
+      "resources": [
+        {
+          "title": "Cracking the Pattern: Sliding Window",
+          "url": "https://leetcode.com/discuss/study-guide/3722472/mastering-sliding-window-technique-a-comprehensive-guide",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "The clearest written guide. Memorize the template."
+        },
+        {
+          "title": "NeetCode — Sliding Window playlist",
+          "url": "https://www.youtube.com/playlist?list=PLot-Xpze53lcb-NUy0FfoVpx8w4l8JOpa",
+          "type": "video",
+          "cost": "free",
+          "whyThisOne": "Pair the article with these videos. Don't skip Longest Substring Without Repeating Characters."
+        }
+      ]
+    },
+    "dsa.stack": {
+      "conceptSummary": "Stacks handle nested structure: parentheses, expression evaluation, undo. Recognize them when the problem has 'matching', 'last seen', or 'undo' semantics.",
+      "resources": [
+        {
+          "title": "NeetCode — Stack playlist",
+          "url": "https://www.youtube.com/playlist?list=PLot-Xpze53lfxD6l5pAGvCD4nPvWKU8Qo",
+          "type": "video",
+          "cost": "free",
+          "whyThisOne": "Covers all the canonical stack problems."
+        }
+      ]
+    },
+    "dsa.monotonic_stack": {
+      "conceptSummary": "Monotonic stacks solve 'next greater/smaller element' problems in O(n). High-frequency in interviews and people whiff them. Drill until the template is automatic.",
+      "resources": [
+        {
+          "title": "Monotonic Stack — Aaron Kao guide",
+          "url": "https://leetcode.com/problems/sum-of-subarray-minimums/solutions/2118729/very-detailed-stack-explanation-o-n-images-comments/",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "The clearest visual explanation of the monotonic stack pattern."
+        }
+      ]
+    },
+    "dsa.linked_lists": {
+      "conceptSummary": "Linked lists test pointer manipulation. Know the dummy node trick, slow/fast pointer (cycle detection), and reversal in-place. These three solve 80% of LL problems.",
+      "resources": [
+        {
+          "title": "NeetCode — Linked List playlist",
+          "url": "https://www.youtube.com/playlist?list=PLot-Xpze53leU0Ec0VkBhnf4npMRFiNcB",
+          "type": "video",
+          "cost": "free",
+          "whyThisOne": "Solid coverage. Reverse Linked List should become muscle memory."
+        }
+      ]
+    },
+    "dsa.binary_search": {
+      "conceptSummary": "Binary search isn't just for sorted arrays. The real skill is recognizing when a problem has a monotonic answer space ('what's the smallest X that satisfies...') and binary searching that.",
+      "resources": [
+        {
+          "title": "Powerful Ultimate Binary Search Template",
+          "url": "https://leetcode.com/discuss/study-guide/786126/python-powerful-ultimate-binary-search-template-solved-many-problems",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "The single best resource on binary search. Memorize the template; it covers all variants."
+        }
+      ]
+    },
+    "dsa.trees": {
+      "conceptSummary": "Trees are recursion's natural habitat. Master DFS (preorder, inorder, postorder) and BFS. Many tree problems become trivial once you pick the right traversal.",
+      "resources": [
+        {
+          "title": "NeetCode — Trees playlist",
+          "url": "https://www.youtube.com/playlist?list=PLot-Xpze53ldg4pN6PfzoJY7KsKcxF1jg",
+          "type": "video",
+          "cost": "free",
+          "whyThisOne": "Comprehensive. Start with Invert Binary Tree, end with Serialize/Deserialize."
+        }
+      ]
+    },
+    "dsa.bfs_dfs": {
+      "conceptSummary": "BFS for shortest-path-in-unweighted-graphs and level-order. DFS for path existence, connectivity, and when you need to backtrack. Pick based on what the problem asks.",
+      "resources": [
+        {
+          "title": "William Fiset — Graph Theory series",
+          "url": "https://www.youtube.com/playlist?list=PLDV1Zeh2NRsDGO4--qE8yH72HFL1Km93P",
+          "type": "video",
+          "cost": "free",
+          "whyThisOne": "The canonical free graph theory course. Episodes 4-6 cover BFS/DFS rigorously."
+        }
+      ]
+    },
+    "dsa.recursion": {
+      "conceptSummary": "Recursion is a tool, not a goal. Know base case, recursive case, and how the call stack unwinds. Practice converting recursive solutions to iterative when needed.",
+      "resources": [
+        {
+          "title": "NeetCode — Recursion fundamentals",
+          "url": "https://neetcode.io/courses/lessons/8-recursion",
+          "type": "video",
+          "cost": "free",
+          "whyThisOne": "Short, clean introduction. Pair with tree problems."
+        }
+      ]
+    },
+    "dsa.heaps": {
+      "conceptSummary": "Heaps solve 'top K' and 'running median' problems. Use a min-heap for top K largest (counterintuitive but correct) and max-heap for top K smallest.",
+      "resources": [
+        {
+          "title": "NeetCode — Heap/Priority Queue playlist",
+          "url": "https://www.youtube.com/playlist?list=PLot-Xpze53lcfAY7nZIlNHdvEDjmPSWLh",
+          "type": "video",
+          "cost": "free",
+          "whyThisOne": "Covers the classic heap problems including K Closest Points and Find Median from Data Stream."
+        }
+      ]
+    },
+    "dsa.priority_queue": {
+      "conceptSummary": "Priority queues are heaps with semantics. Use them in Dijkstra, scheduling problems, and anything that needs 'process by importance'.",
+      "resources": [
+        {
+          "title": "NeetCode — Heap/Priority Queue playlist",
+          "url": "https://www.youtube.com/playlist?list=PLot-Xpze53lcfAY7nZIlNHdvEDjmPSWLh",
+          "type": "video",
+          "cost": "free",
+          "whyThisOne": "Same as heaps."
+        }
+      ]
+    },
+    "dsa.intervals": {
+      "conceptSummary": "Interval problems (merge, insert, schedule) usually start with a sort by start time. After sorting, you're often looking for overlap conditions.",
+      "resources": [
+        {
+          "title": "NeetCode — Intervals playlist",
+          "url": "https://www.youtube.com/playlist?list=PLot-Xpze53ldBT_7QA8NVot7n-rWWvGdM",
+          "type": "video",
+          "cost": "free",
+          "whyThisOne": "Merge Intervals and Meeting Rooms II are classics. Drill them."
+        }
+      ]
+    },
+    "dsa.graphs": {
+      "conceptSummary": "Graphs are trees with cycles. Most graph problems reduce to BFS, DFS, Dijkstra, topological sort, or union find. Identify which one in the first 2 minutes.",
+      "resources": [
+        {
+          "title": "William Fiset — Graph Theory full course",
+          "url": "https://www.youtube.com/playlist?list=PLDV1Zeh2NRsDGO4--qE8yH72HFL1Km93P",
+          "type": "video",
+          "cost": "free",
+          "estimatedMinutes": 420,
+          "whyThisOne": "If you watch one graph resource, this is it. Foundational."
+        },
+        {
+          "title": "NeetCode — Graphs playlist",
+          "url": "https://www.youtube.com/playlist?list=PLot-Xpze53leF0FeHz2X0aG3zd0mr1AW_",
+          "type": "video",
+          "cost": "free",
+          "whyThisOne": "Interview-shaped graph problems. Pair with Fiset's theory course."
+        }
+      ]
+    },
+    "dsa.dijkstra": {
+      "conceptSummary": "Dijkstra finds shortest paths in weighted graphs with non-negative edges. Implementation: priority queue + visited set. Memorize the template.",
+      "resources": [
+        {
+          "title": "William Fiset — Dijkstra explained",
+          "url": "https://www.youtube.com/watch?v=pSqmAO-m7Lk",
+          "type": "video",
+          "cost": "free",
+          "whyThisOne": "Best visual walkthrough. Watch twice."
+        }
+      ]
+    },
+    "dsa.topological_sort": {
+      "conceptSummary": "Topological sort orders nodes in a DAG so dependencies come first. Use Kahn's algorithm (BFS with in-degree) for clarity. Recognize it when the problem mentions 'order' or 'prerequisite'.",
+      "resources": [
+        {
+          "title": "NeetCode — Course Schedule walkthrough",
+          "url": "https://www.youtube.com/watch?v=EgI5nU9etnU",
+          "type": "video",
+          "cost": "free",
+          "whyThisOne": "The canonical topological sort interview question, walked through clearly."
+        }
+      ]
+    },
+    "dsa.backtracking": {
+      "conceptSummary": "Backtracking explores solution space depth-first, undoing choices when they fail. Templates: combinations, permutations, subsets, n-queens. Master one and the rest fall.",
+      "resources": [
+        {
+          "title": "NeetCode — Backtracking playlist",
+          "url": "https://www.youtube.com/playlist?list=PLot-Xpze53lf5C3HSjCnyFghlW0G1HHRo",
+          "type": "video",
+          "cost": "free",
+          "whyThisOne": "Subsets and Combination Sum are the gateway problems."
+        }
+      ]
+    },
+    "dsa.tries": {
+      "conceptSummary": "Tries store strings character-by-character for prefix queries. Use them for autocomplete, word search, and 'find all words with prefix' problems.",
+      "resources": [
+        {
+          "title": "NeetCode — Implement Trie walkthrough",
+          "url": "https://www.youtube.com/watch?v=oobqoCJlHA0",
+          "type": "video",
+          "cost": "free",
+          "whyThisOne": "Once you can implement a trie from scratch, the variants are easy."
+        }
+      ]
+    },
+    "dsa.union_find": {
+      "conceptSummary": "Union find (disjoint set) solves connectivity problems in near-constant time. Use it for 'are these two connected', 'count connected components', and Kruskal's MST.",
+      "resources": [
+        {
+          "title": "Union Find — William Fiset",
+          "url": "https://www.youtube.com/watch?v=ibjEGG7ylHk",
+          "type": "video",
+          "cost": "free",
+          "whyThisOne": "Best union find tutorial available. Watch the whole series."
+        }
+      ]
+    },
+    "dsa.dp_1d": {
+      "conceptSummary": "1D DP problems have one varying dimension (usually array index). Climbing Stairs, House Robber, Coin Change. Pattern: define dp[i], find recurrence, identify base case.",
+      "resources": [
+        {
+          "title": "Errichto — DP for beginners",
+          "url": "https://www.youtube.com/watch?v=YBSt1jYwVfU",
+          "type": "video",
+          "cost": "free",
+          "whyThisOne": "Most rigorous free DP intro. Will hurt; that's the point."
+        },
+        {
+          "title": "NeetCode — 1D DP playlist",
+          "url": "https://www.youtube.com/playlist?list=PLot-Xpze53lcvx_tjrr_m2lgD2NsRHlNO",
+          "type": "video",
+          "cost": "free",
+          "whyThisOne": "Interview-shaped 1D DP problems."
+        }
+      ]
+    },
+    "dsa.dp_2d": {
+      "conceptSummary": "2D DP has two varying dimensions: usually two strings or a grid. Edit distance, longest common subsequence, unique paths. Draw the table.",
+      "resources": [
+        {
+          "title": "NeetCode — 2D DP playlist",
+          "url": "https://www.youtube.com/playlist?list=PLot-Xpze53lcdtb-LXJUlOFTtUkFNpNI4",
+          "type": "video",
+          "cost": "free",
+          "whyThisOne": "Edit Distance and Longest Common Subsequence are the canonical 2D DP problems."
+        }
+      ]
+    },
+    "dsa.lis": {
+      "conceptSummary": "Longest Increasing Subsequence has two solutions: O(n²) DP and O(n log n) with binary search + patience sorting. Know both; the binary search version surprises people.",
+      "resources": [
+        {
+          "title": "LIS — both solutions explained",
+          "url": "https://www.youtube.com/watch?v=cjWnW0hdF1Y",
+          "type": "video",
+          "cost": "free",
+          "whyThisOne": "Covers both DP and binary search approaches."
+        }
+      ]
+    },
+    "dsa.coin_change": {
+      "conceptSummary": "Coin Change is the unbounded knapsack archetype. Two variants: minimum coins (1D DP) and number of ways (also 1D DP, different transition). Both interviewed.",
+      "resources": [
+        {
+          "title": "NeetCode — Coin Change",
+          "url": "https://www.youtube.com/watch?v=H9bfqozjoqs",
+          "type": "video",
+          "cost": "free",
+          "whyThisOne": "Walks through both variants."
+        }
+      ]
+    },
+    "dsa.edit_distance": {
+      "conceptSummary": "Edit distance is the prototype 2D DP problem. dp[i][j] = ops to convert s1[0:i] to s2[0:j]. Three transitions: insert, delete, replace.",
+      "resources": [
+        {
+          "title": "Edit Distance — NeetCode",
+          "url": "https://www.youtube.com/watch?v=XYi2-LPrwm4",
+          "type": "video",
+          "cost": "free",
+          "whyThisOne": "Clearest walkthrough of the recurrence and table."
+        }
+      ]
+    },
+    "dsa.graphs_advanced": {
+      "conceptSummary": "Advanced graphs: Bellman-Ford (negative weights), Floyd-Warshall (all pairs), bidirectional BFS, A*. Most interviews don't go this deep, but staff-level loops can.",
+      "resources": [
+        {
+          "title": "William Fiset — Advanced Graph Theory",
+          "url": "https://www.youtube.com/playlist?list=PLDV1Zeh2NRsDGO4--qE8yH72HFL1Km93P",
+          "type": "video",
+          "cost": "free",
+          "whyThisOne": "Continue the same series — episodes 15+ cover advanced topics."
+        }
+      ]
+    },
+    "dsa.shortest_paths": {
+      "conceptSummary": "Pick the right algorithm: BFS (unweighted), Dijkstra (non-negative weights), Bellman-Ford (negative weights), Floyd-Warshall (all-pairs). Match algorithm to problem in the first 2 minutes.",
+      "resources": [
+        {
+          "title": "Shortest Paths algorithms — Fiset",
+          "url": "https://www.youtube.com/watch?v=09_LlHjoEiY",
+          "type": "video",
+          "cost": "free",
+          "whyThisOne": "Comparison of Dijkstra vs Bellman-Ford. Pick-the-right-tool framing."
+        }
+      ]
+    },
+    "dsa.mst": {
+      "conceptSummary": "Minimum spanning tree connects all nodes with minimum total edge weight. Two algorithms: Kruskal (union find) and Prim (priority queue). Rare in interviews but appears in design.",
+      "resources": [
+        {
+          "title": "Kruskal vs Prim — Fiset",
+          "url": "https://www.youtube.com/watch?v=jsmMtJpPnhU",
+          "type": "video",
+          "cost": "free",
+          "whyThisOne": "Concise. Watch only if you have time after core graph topics."
+        }
+      ]
+    },
+    "dsa.mixed_review": {
+      "conceptSummary": "Mixed practice forces pattern recognition under pressure. Pull random mediums from LeetCode top-150, set 25-min timer, solve out loud.",
+      "resources": [
+        {
+          "title": "LeetCode — Top Interview 150",
+          "url": "https://leetcode.com/studyplan/top-interview-150/",
+          "type": "problem_set",
+          "cost": "freemium",
+          "whyThisOne": "Random selection from this list = realistic mixed practice."
+        }
+      ]
+    },
+    "dsa.hard_problems": {
+      "conceptSummary": "Hards differ from mediums in scope, not novelty. Most are 'medium + edge case' or 'two mediums combined'. Don't panic; decompose.",
+      "resources": [
+        {
+          "title": "LeetCode — Hard problems with high acceptance",
+          "url": "https://leetcode.com/problemset/?difficulty=HARD&page=1",
+          "type": "problem_set",
+          "cost": "freemium",
+          "whyThisOne": "Filter by acceptance rate >40% — those are the 'approachable hards'."
+        }
+      ]
+    },
+
+    "sd.caching": {
+      "conceptSummary": "Caching trades memory for latency. Three write strategies (through/back/around) with different consistency tradeoffs. Cache invalidation is the hard part — there's a famous quote about that.",
+      "resources": [
+        {
+          "title": "ByteByteGo — Top Caching Strategies",
+          "url": "https://www.youtube.com/watch?v=dGAgxozNWFE",
+          "type": "video",
+          "cost": "free",
+          "whyThisOne": "Visual, concise, covers the strategies with tradeoffs."
+        },
+        {
+          "title": "DDIA Chapter 1 (relevant sections)",
+          "url": "https://dataintensive.net/",
+          "type": "book_chapter",
+          "cost": "paid",
+          "whyThisOne": "If you own DDIA, the foundational caching sections are essential reading. The book is worth buying."
+        }
+      ]
+    },
+    "sd.caching_eviction": {
+      "conceptSummary": "Eviction policies decide what to drop when cache fills: LRU (recent), LFU (frequent), ARC (adaptive), FIFO. LRU wins most interviews; know when LFU is correct (skewed access patterns).",
+      "resources": [
+        {
+          "title": "Cache Eviction Policies Compared",
+          "url": "https://www.enjoyalgorithms.com/blog/cache-eviction-policies",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Side-by-side comparison with use cases."
+        }
+      ]
+    },
+    "sd.load_balancing": {
+      "conceptSummary": "Load balancers distribute traffic. L4 = transport layer (fast, no payload inspection). L7 = application layer (slower, content-aware routing). Algorithms: round-robin, least-connections, consistent hash.",
+      "resources": [
+        {
+          "title": "Hello Interview — Load Balancing",
+          "url": "https://www.hellointerview.com/learn/system-design/deep-dives/load-balancers",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Interview-focused. Covers what gets asked."
+        },
+        {
+          "title": "Hussein Nasser — L4 vs L7 deep dive",
+          "url": "https://www.youtube.com/watch?v=aKMLgFVxZYk",
+          "type": "video",
+          "cost": "free",
+          "whyThisOne": "The clearest L4/L7 explanation on the internet."
+        }
+      ]
+    },
+    "sd.cap": {
+      "conceptSummary": "CAP says: under network partition, choose consistency or availability. Real systems are PACELC (Partition→AC, Else→Latency/Consistency). Most interviewers want PACELC reasoning, not CAP buzzwords.",
+      "resources": [
+        {
+          "title": "Please stop calling databases CP or AP",
+          "url": "https://martin.kleppmann.com/2015/05/11/please-stop-calling-databases-cp-or-ap.html",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Kleppmann (DDIA author) explains why CAP is misused. Read this once and you'll be ahead of 90% of candidates."
+        }
+      ]
+    },
+    "sd.databases": {
+      "conceptSummary": "SQL: ACID, structured, joins, vertical scale. NoSQL: BASE, flexible schema, horizontal scale, eventually consistent. Choose based on access pattern, not buzzwords.",
+      "resources": [
+        {
+          "title": "ByteByteGo — SQL vs NoSQL",
+          "url": "https://www.youtube.com/watch?v=ruz-vK8IesE",
+          "type": "video",
+          "cost": "free",
+          "whyThisOne": "8-minute clear comparison."
+        },
+        {
+          "title": "DDIA Chapter 2",
+          "url": "https://dataintensive.net/",
+          "type": "book_chapter",
+          "cost": "paid",
+          "whyThisOne": "Definitive treatment of data models."
+        }
+      ]
+    },
+    "sd.indexing": {
+      "conceptSummary": "Indexes trade write speed for read speed. B-trees for range queries (most SQL DBs). LSM trees for write-heavy workloads (Cassandra, RocksDB). Composite indexes have leftmost-prefix rules.",
+      "resources": [
+        {
+          "title": "Use The Index, Luke",
+          "url": "https://use-the-index-luke.com/",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Free book on SQL indexing. Read chapters 1-3 minimum."
+        }
+      ]
+    },
+    "sd.replication": {
+      "conceptSummary": "Replication = same data on multiple nodes. Leader-follower (simple, eventual lag). Multi-leader (complex, conflict resolution). Leaderless (Cassandra-style, quorum reads/writes).",
+      "resources": [
+        {
+          "title": "DDIA Chapter 5",
+          "url": "https://dataintensive.net/",
+          "type": "book_chapter",
+          "cost": "paid",
+          "whyThisOne": "The replication chapter. There is no better resource."
+        }
+      ]
+    },
+    "sd.partitioning": {
+      "conceptSummary": "Partitioning (sharding) splits data across nodes. Hash-based (even distribution, no range queries). Range-based (range queries work, hot spot risk). Consistent hashing (smooth resharding).",
+      "resources": [
+        {
+          "title": "DDIA Chapter 6",
+          "url": "https://dataintensive.net/",
+          "type": "book_chapter",
+          "cost": "paid",
+          "whyThisOne": "Partitioning chapter. Covers consistent hashing definitively."
+        },
+        {
+          "title": "ByteByteGo — Consistent Hashing",
+          "url": "https://www.youtube.com/watch?v=UF9Iqmg94tk",
+          "type": "video",
+          "cost": "free",
+          "whyThisOne": "Visual companion to the DDIA chapter."
+        }
+      ]
+    },
+    "sd.consistency": {
+      "conceptSummary": "Consistency models form a hierarchy: linearizable > sequential > causal > eventual. Strong = expensive. Most production systems use eventual or causal.",
+      "resources": [
+        {
+          "title": "Jepsen — Consistency Models",
+          "url": "https://jepsen.io/consistency",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Authoritative reference. Bookmark it."
+        }
+      ]
+    },
+    "sd.idempotency": {
+      "conceptSummary": "Idempotent operations produce the same result if repeated. Critical for retry logic. Implementation: idempotency keys, deduplication windows, conditional writes.",
+      "resources": [
+        {
+          "title": "Stripe — Designing robust APIs (idempotency)",
+          "url": "https://stripe.com/blog/idempotency",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "How a real production system handles idempotency keys."
+        }
+      ]
+    },
+    "sd.url_shortener": {
+      "conceptSummary": "URL shortener tests: hash generation strategy, DB choice, caching, read/write split, scale to billions of URLs. Surprisingly deep when pushed.",
+      "resources": [
+        {
+          "title": "Hello Interview — URL Shortener walkthrough",
+          "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/bitly",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Interview-shaped walkthrough with tradeoff discussions."
+        },
+        {
+          "title": "Alex Xu — System Design Interview Vol 1",
+          "url": "https://www.amazon.com/System-Design-Interview-insiders-Second/dp/B08CMF2CQF",
+          "type": "book_chapter",
+          "cost": "paid",
+          "whyThisOne": "Chapter 8 has the canonical URL shortener walkthrough. Worth buying the book."
+        }
+      ]
+    },
+    "sd.rate_limiter": {
+      "conceptSummary": "Rate limiter algorithms: token bucket (bursts allowed), leaky bucket (smooth), fixed window (simple, edge issues), sliding window (best). Distribute with Redis or per-host with sync.",
+      "resources": [
+        {
+          "title": "Hello Interview — Rate Limiter",
+          "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/rate-limiter",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "All four algorithms, with distributed concerns."
+        },
+        {
+          "title": "Alex Xu — Rate Limiter chapter",
+          "url": "https://www.amazon.com/System-Design-Interview-insiders-Second/dp/B08CMF2CQF",
+          "type": "book_chapter",
+          "cost": "paid",
+          "whyThisOne": "Vol 1 Chapter 4. Definitive."
+        }
+      ]
+    },
+    "sd.pubsub": {
+      "conceptSummary": "Pub/sub decouples producers from consumers. Kafka (durable log, replay). RabbitMQ (queue, push). Redis Streams (light). Choice depends on durability and replay needs.",
+      "resources": [
+        {
+          "title": "Kafka in 100 Seconds + deep dive",
+          "url": "https://www.youtube.com/watch?v=uvb00oaa3k8",
+          "type": "video",
+          "cost": "free",
+          "whyThisOne": "Fastest path to understanding Kafka's value prop."
+        },
+        {
+          "title": "DDIA Chapter 11",
+          "url": "https://dataintensive.net/",
+          "type": "book_chapter",
+          "cost": "paid",
+          "whyThisOne": "Stream processing chapter. The deep treatment."
+        }
+      ]
+    },
+    "sd.retries": {
+      "conceptSummary": "Retries need exponential backoff with jitter (avoids thundering herd) and a circuit breaker (avoids cascading failures). Dead letter queues catch what can't be retried.",
+      "resources": [
+        {
+          "title": "AWS Architecture Blog — Exponential Backoff and Jitter",
+          "url": "https://aws.amazon.com/blogs/architecture/exponential-backoff-and-jitter/",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "The canonical post on why jitter matters."
+        }
+      ]
+    },
+    "sd.backpressure": {
+      "conceptSummary": "Backpressure protects downstream systems from being overwhelmed. Implement via: bounded queues, reject-when-full, slow-down signals upstream. Without it, cascading failure.",
+      "resources": [
+        {
+          "title": "Backpressure Explained — Reactive Manifesto",
+          "url": "https://www.reactivemanifesto.org/glossary#Back-Pressure",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Foundational definition. Pair with a real system example."
+        }
+      ]
+    },
+    "sd.notifications": {
+      "conceptSummary": "Notification system: multi-channel (push, email, SMS), per-user preferences, rate limiting, templating, delivery tracking. Fanout is the scaling challenge.",
+      "resources": [
+        {
+          "title": "Alex Xu — Notification System",
+          "url": "https://www.amazon.com/System-Design-Interview-insiders-Second/dp/B08CMF2CQF",
+          "type": "book_chapter",
+          "cost": "paid",
+          "whyThisOne": "Vol 1 Chapter 10. Complete walkthrough."
+        }
+      ]
+    },
+    "sd.task_queue": {
+      "conceptSummary": "Distributed task queue: producers enqueue, workers dequeue, ack on success, retry on failure. Consider: priorities, scheduled tasks, exactly-once semantics.",
+      "resources": [
+        {
+          "title": "How Celery works (architecture)",
+          "url": "https://docs.celeryq.dev/en/stable/userguide/index.html",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Real production task queue. Read the architecture sections."
+        }
+      ]
+    },
+    "sd.observability": {
+      "conceptSummary": "Three pillars: metrics (counts, gauges, histograms), logs (events), traces (request flow across services). All three needed; each answers different questions.",
+      "resources": [
+        {
+          "title": "Honeycomb — The Three Pillars of Observability",
+          "url": "https://www.honeycomb.io/blog/observability-3-1-4-1",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Practitioner perspective from a leading observability company."
+        }
+      ]
+    },
+    "sd.twitter_feed": {
+      "conceptSummary": "Twitter feed: fanout-on-write (push), fanout-on-read (pull), or hybrid (celebrities pull, normal users push). Hybrid is the production answer.",
+      "resources": [
+        {
+          "title": "Hello Interview — Twitter / X feed",
+          "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/twitter",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Walks through all three approaches with tradeoffs."
+        }
+      ]
+    },
+    "sd.dropbox": {
+      "conceptSummary": "File sync: chunking, dedup, delta sync, conflict resolution, metadata vs content separation. The hard part is sync state machines, not storage.",
+      "resources": [
+        {
+          "title": "Hello Interview — Dropbox",
+          "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/dropbox",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Strong walkthrough with focus on chunking and sync."
+        }
+      ]
+    },
+    "sd.api_gateway": {
+      "conceptSummary": "API gateway: auth, rate limiting, routing, request/response transformation, observability. Single entry point for microservices. Don't put business logic here.",
+      "resources": [
+        {
+          "title": "Hello Interview — API Gateway",
+          "url": "https://www.hellointerview.com/learn/system-design/deep-dives/api-gateway",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Interview-focused deep dive."
+        }
+      ]
+    },
+    "sd.ride_sharing": {
+      "conceptSummary": "Ride-sharing: real-time location tracking, driver-rider matching (geo-indexed), surge pricing, trip lifecycle, payments. Geohashing or quadtrees for spatial queries.",
+      "resources": [
+        {
+          "title": "Hello Interview — Uber",
+          "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/uber",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "End-to-end ride-sharing design with geospatial focus."
+        }
+      ]
+    },
+
+    "ai.transformers": {
+      "conceptSummary": "Transformers replaced RNNs by using self-attention. Encoder-decoder (translation), encoder-only (BERT), decoder-only (GPT). Modern LLMs are decoder-only.",
+      "resources": [
+        {
+          "title": "The Illustrated Transformer",
+          "url": "https://jalammar.github.io/illustrated-transformer/",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "The single best transformer explainer ever written."
+        },
+        {
+          "title": "3Blue1Brown — Transformers visually explained",
+          "url": "https://www.youtube.com/watch?v=wjZofJX0v4M",
+          "type": "video",
+          "cost": "free",
+          "whyThisOne": "Mathematical intuition without the math pain. Watch after the Alammar article."
+        }
+      ]
+    },
+    "ai.attention": {
+      "conceptSummary": "Self-attention computes how much each token should attend to every other token. Q, K, V projections. Multi-head = parallel attention with different learned projections.",
+      "resources": [
+        {
+          "title": "Attention Is All You Need (paper, readable sections)",
+          "url": "https://arxiv.org/abs/1706.03762",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Read sections 3.1-3.3. The original paper is more accessible than people think."
+        },
+        {
+          "title": "Lilian Weng — Attention deep-dive",
+          "url": "https://lilianweng.github.io/posts/2018-06-24-attention/",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Comprehensive reference. Bookmark."
+        }
+      ]
+    },
+    "ai.tokenization": {
+      "conceptSummary": "Tokenizers split text into model-input units. BPE (most common), WordPiece, SentencePiece. Token count drives cost and context limits. Different tokenizers handle non-English languages very differently.",
+      "resources": [
+        {
+          "title": "Karpathy — Let's build the GPT Tokenizer",
+          "url": "https://www.youtube.com/watch?v=zduSFxRajkE",
+          "type": "video",
+          "cost": "free",
+          "estimatedMinutes": 120,
+          "whyThisOne": "Karpathy builds a tokenizer from scratch. Long but unmatched depth."
+        }
+      ]
+    },
+    "ai.embeddings": {
+      "conceptSummary": "Embeddings map tokens (or sentences/documents) to dense vectors. Geometric properties: similar meaning → close vectors. Used for retrieval, clustering, classification.",
+      "resources": [
+        {
+          "title": "Cohere — What are Embeddings?",
+          "url": "https://txt.cohere.com/sentence-word-embeddings/",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Practitioner explanation, less academic."
+        }
+      ]
+    },
+    "ai.serving": {
+      "conceptSummary": "LLM serving differs from typical web serving: long requests, GPU-bound, memory-constrained by KV cache, autoregressive. Latency = TTFT + per-token. Throughput vs latency tradeoff is everywhere.",
+      "resources": [
+        {
+          "title": "Lilian Weng — Large Transformer Model Inference Optimization",
+          "url": "https://lilianweng.github.io/posts/2023-01-10-inference-optimization/",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Reference doc for inference optimization. Read entirely."
+        }
+      ]
+    },
+    "ai.continuous_batching": {
+      "conceptSummary": "Continuous batching (vs static): inject new requests into a running batch as old ones finish. 10-20x throughput improvement. Foundational to vLLM and modern serving.",
+      "resources": [
+        {
+          "title": "Anyscale — How Continuous Batching Enables 23x Throughput",
+          "url": "https://www.anyscale.com/blog/continuous-batching-llm-inference",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "The canonical post. Required reading for AI infra interviews."
+        }
+      ]
+    },
+    "ai.kv_cache": {
+      "conceptSummary": "KV cache stores attention keys/values from previous tokens to avoid recomputation. Grows linearly with sequence length. Dominates VRAM at long contexts. PagedAttention (vLLM) manages it efficiently.",
+      "resources": [
+        {
+          "title": "vLLM — Efficient Memory Management with PagedAttention",
+          "url": "https://blog.vllm.ai/2023/06/20/vllm.html",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Original PagedAttention post. KV cache management is interview gold."
+        }
+      ]
+    },
+    "ai.speculative_decoding": {
+      "conceptSummary": "Speculative decoding: small draft model generates candidate tokens, large model verifies in parallel. 2-3x speedup when draft is accurate. Tradeoff: extra compute on rejection.",
+      "resources": [
+        {
+          "title": "HuggingFace — Speculative Decoding explained",
+          "url": "https://huggingface.co/blog/assisted-generation",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Practical explanation with code."
+        }
+      ]
+    },
+    "ai.vllm": {
+      "conceptSummary": "vLLM is the dominant open-source inference engine. Key innovations: PagedAttention (KV cache), continuous batching, optimized CUDA kernels. Know its architecture and tradeoffs vs TensorRT-LLM.",
+      "resources": [
+        {
+          "title": "vLLM — Architecture Overview",
+          "url": "https://docs.vllm.ai/en/latest/design/arch_overview.html",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Official architecture docs. Pair with the PagedAttention post."
+        }
+      ]
+    },
+    "ai.inference_api": {
+      "conceptSummary": "Inference API design: request routing (model selection), batching, multi-tenancy, rate limiting, streaming, fallbacks. The 'design ChatGPT backend' question lives here.",
+      "resources": [
+        {
+          "title": "Hello Interview — Design an LLM Chat Service",
+          "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/llm-chat",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Interview-shaped walkthrough."
+        }
+      ]
+    },
+    "ai.gpu_systems": {
+      "conceptSummary": "GPU systems for ML: VRAM (80GB H100, 192GB MI300X), HBM bandwidth (the actual bottleneck), tensor cores (matmul speed). Memory-bound vs compute-bound matters for optimization.",
+      "resources": [
+        {
+          "title": "Horace He — Making Deep Learning Go Brrrr",
+          "url": "https://horace.io/brrr_intro.html",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Best intro to GPU bottlenecks for ML. Memory-bound vs compute-bound framing."
+        }
+      ]
+    },
+    "ai.quantization": {
+      "conceptSummary": "Quantization reduces model precision (FP16 → INT8/INT4) for smaller memory + faster inference. Methods: GPTQ, AWQ, SmoothQuant. Tradeoff: quality degradation, especially at INT4.",
+      "resources": [
+        {
+          "title": "HuggingFace — Quantization in depth",
+          "url": "https://huggingface.co/docs/transformers/main/en/quantization/overview",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Practical reference covering all major methods."
+        }
+      ]
+    },
+    "ai.multitenancy": {
+      "conceptSummary": "Multi-tenant inference: noisy neighbor (one user blocking others), fair scheduling (token-level priorities), MIG (NVIDIA multi-instance GPU), per-tenant quotas. Interview gold.",
+      "resources": [
+        {
+          "title": "NVIDIA MIG documentation",
+          "url": "https://docs.nvidia.com/datacenter/tesla/mig-user-guide/",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "How GPU partitioning actually works."
+        }
+      ]
+    },
+    "ai.cost_latency": {
+      "conceptSummary": "Cost/latency tradeoffs: model size vs quality (use smallest that meets bar), batching vs latency (bigger batches = more throughput, more latency), caching (KV cache reuse, response cache).",
+      "resources": [
+        {
+          "title": "Anthropic — Prompt Caching",
+          "url": "https://www.anthropic.com/news/prompt-caching",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Real-world example of caching as cost optimization."
+        }
+      ]
+    },
+    "ai.tensor_parallelism": {
+      "conceptSummary": "Tensor parallelism splits each layer across GPUs (each does part of the matmul). Communication-heavy. Used for models too large for one GPU. Pair with NVLink for bandwidth.",
+      "resources": [
+        {
+          "title": "HuggingFace — Model Parallelism Guide",
+          "url": "https://huggingface.co/docs/transformers/v4.15.0/parallelism",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "All parallelism strategies in one place. Read tensor parallelism section."
+        }
+      ]
+    },
+    "ai.pipeline_parallelism": {
+      "conceptSummary": "Pipeline parallelism splits layers across GPUs (GPU 1 does layers 1-10, GPU 2 does 11-20). Lower communication than TP, but pipeline bubbles waste compute without microbatching.",
+      "resources": [
+        {
+          "title": "HuggingFace — Model Parallelism Guide (Pipeline section)",
+          "url": "https://huggingface.co/docs/transformers/v4.15.0/parallelism",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Same doc as TP — read both sections."
+        }
+      ]
+    },
+    "ai.model_sharding": {
+      "conceptSummary": "Model sharding strategies: TP (within layer), PP (between layers), DP (replicate model, split data), FSDP (shard model state). 3D parallelism = TP+PP+DP combined.",
+      "resources": [
+        {
+          "title": "PyTorch FSDP Tutorial",
+          "url": "https://pytorch.org/tutorials/intermediate/FSDP_tutorial.html",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "FSDP is the modern standard for training. Read the conceptual sections."
+        }
+      ]
+    },
+    "ai.eval_infra": {
+      "conceptSummary": "Eval infrastructure: how do you know your model regressed? Offline evals (benchmarks, golden sets), online evals (A/B, shadow traffic), human eval. Critical at Anthropic/OpenAI; underappreciated by candidates.",
+      "resources": [
+        {
+          "title": "Hamel Husain — Your AI Product Needs Evals",
+          "url": "https://hamel.dev/blog/posts/evals/",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Practitioner perspective. Read the full post."
+        }
+      ]
+    },
+    "ai.model_gateway": {
+      "conceptSummary": "Model gateway routes requests to appropriate model based on task, cost, latency. Patterns: cascading (small model first, escalate on failure), routing (classifier picks model), ensemble (multiple models vote).",
+      "resources": [
+        {
+          "title": "Martian / RouteLLM (research overview)",
+          "url": "https://lmsys.org/blog/2024-07-01-routellm/",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Real implementation of LLM routing with cost/quality tradeoffs."
+        }
+      ]
+    },
+    "ai.rag": {
+      "conceptSummary": "RAG = retrieval-augmented generation. Pipeline: chunk → embed → store in vector DB → retrieve relevant chunks → inject into prompt. Quality depends on chunking strategy, retrieval method, reranking.",
+      "resources": [
+        {
+          "title": "Anthropic — Contextual Retrieval",
+          "url": "https://www.anthropic.com/news/contextual-retrieval",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "State-of-the-art RAG technique. Required reading for AI interviews in 2026."
+        },
+        {
+          "title": "Pinecone — RAG Handbook",
+          "url": "https://www.pinecone.io/learn/retrieval-augmented-generation/",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Comprehensive RAG fundamentals."
+        }
+      ]
+    },
+    "ai.rag_platform": {
+      "conceptSummary": "RAG platform design: ingestion pipeline (parsing, chunking, embedding), vector DB choice, retrieval (hybrid: dense + sparse), reranking, freshness (re-indexing), eval. Many failure modes.",
+      "resources": [
+        {
+          "title": "Hello Interview — Design RAG System",
+          "url": "https://www.hellointerview.com/blog/mastering-rag-system-design-interview",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Interview-shaped walkthrough."
+        }
+      ]
+    },
+    "ai.agents": {
+      "conceptSummary": "Agent orchestration: tool use, planning, multi-step reasoning, error recovery. Patterns: ReAct, plan-and-execute, multi-agent. Production challenge: cost (many calls), latency (sequential), debuggability.",
+      "resources": [
+        {
+          "title": "Anthropic — Building Effective Agents",
+          "url": "https://www.anthropic.com/research/building-effective-agents",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Definitive guide to agent patterns from Anthropic."
+        }
+      ]
+    },
+    "ai.vector_db": {
+      "conceptSummary": "Vector DB indexes: HNSW (graph-based, fast, memory-heavy), IVF (clustering-based, lighter), PQ (compressed). Tradeoff: recall vs latency vs memory. HNSW dominates production.",
+      "resources": [
+        {
+          "title": "Pinecone — HNSW Explained",
+          "url": "https://www.pinecone.io/learn/series/faiss/hnsw/",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Best HNSW explainer. Pair with the IVF post on the same site."
+        }
+      ]
+    },
+    "ai.chatgpt_backend": {
+      "conceptSummary": "Design ChatGPT backend: streaming responses (SSE), conversation state, multi-model routing, rate limiting (per-user, per-org), abuse detection, content moderation. Combines AI infra + traditional SD.",
+      "resources": [
+        {
+          "title": "Hello Interview — Design an LLM Chat Service",
+          "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/llm-chat",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Same as inference API — re-read with chat-specific lens."
+        }
+      ]
+    },
+
+    "behavioral.framework": {
+      "conceptSummary": "STAR: Situation, Task, Action, Result. Be specific. Quantify when possible. Action should be 60% of the story — that's where signal lives.",
+      "resources": [
+        {
+          "title": "Jackson Gabbard — Behavioral Interviews",
+          "url": "https://jackson.dev/post/whats-up-with-behavioral-interviews/",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Ex-FB engineer, ran the bar raiser. Best free behavioral guide."
+        },
+        {
+          "title": "Gergely Orosz — Behavioral Interview Prep",
+          "url": "https://blog.pragmaticengineer.com/preparing-for-the-systems-design-and-coding-interviews/",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Senior+ perspective."
+        }
+      ]
+    },
+    "behavioral.ownership": {
+      "conceptSummary": "Ownership stories: time you saw something wasn't working and fixed it without being asked. Bonus: spanning beyond your team.",
+      "resources": [
+        {
+          "title": "Amazon Leadership Principles — Ownership",
+          "url": "https://www.amazon.jobs/content/en/our-workplace/leadership-principles",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Even if not interviewing at Amazon, their LP framework is the bar for ownership stories."
+        }
+      ]
+    },
+    "behavioral.ambiguity": {
+      "conceptSummary": "Ambiguity stories: time the requirements were unclear and you had to define the problem. Show how you cut through, not how you complained.",
+      "resources": [
+        {
+          "title": "STAR method — same as framework",
+          "url": "https://jackson.dev/post/whats-up-with-behavioral-interviews/",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Re-read framework post with ambiguity lens."
+        }
+      ]
+    },
+    "behavioral.scaling": {
+      "conceptSummary": "Scaling stories: time you took something from working-but-fragile to robust-at-volume. Be specific about the scaling dimension (users, data, team).",
+      "resources": [
+        {
+          "title": "STAR framework",
+          "url": "https://jackson.dev/post/whats-up-with-behavioral-interviews/",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Same framework, different category."
+        }
+      ]
+    },
+    "behavioral.incident": {
+      "conceptSummary": "Incident stories: production broke, you handled it. Cover detection, mitigation, communication, post-mortem. The post-mortem and follow-through is what staff+ interviewers want.",
+      "resources": [
+        {
+          "title": "Google SRE Book — Postmortem Culture",
+          "url": "https://sre.google/sre-book/postmortem-culture/",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Frames how senior engineers think about incidents."
+        }
+      ]
+    },
+    "behavioral.disagreement": {
+      "conceptSummary": "Disagreement stories: time you disagreed with someone (peer, manager, exec) and how you handled it. Bonus: time you were wrong and changed your mind.",
+      "resources": [
+        {
+          "title": "STAR framework",
+          "url": "https://jackson.dev/post/whats-up-with-behavioral-interviews/",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Use framework, focus on the action portion."
+        }
+      ]
+    },
+    "behavioral.mentoring": {
+      "conceptSummary": "Mentoring stories: someone you grew. Be specific about what they couldn't do before and could after. Senior+ roles need this.",
+      "resources": [
+        {
+          "title": "Rands in Repose — Managing Up",
+          "url": "https://randsinrepose.com/archives/",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Browse Rands' archive for the engineering management lens."
+        }
+      ]
+    },
+    "behavioral.tech_leadership": {
+      "conceptSummary": "Tech leadership stories: time you drove a technical decision across a team or org. Show how you built consensus, not how you forced it.",
+      "resources": [
+        {
+          "title": "Will Larson — Staff Engineer",
+          "url": "https://staffeng.com/",
+          "type": "article",
+          "cost": "free",
+          "whyThisOne": "Free essays on staff+ engineering. Especially the archetypes and stories sections."
+        }
+      ]
+    },
+
+    "tools.mock_interviews": {
+      "conceptSummary": "Mock interviews are the highest-ROI prep activity. The gap between 'I can solve this alone' and 'I can solve this while watched and explaining' is huge and only closes through reps.",
+      "resources": [
+        {
+          "title": "Pramp",
+          "url": "https://www.pramp.com/",
+          "type": "tool",
+          "cost": "free",
+          "whyThisOne": "Free peer-to-peer mock interviews. Variable quality but free reps."
+        },
+        {
+          "title": "Hello Interview — paid mocks with industry interviewers",
+          "url": "https://www.hellointerview.com/",
+          "type": "tool",
+          "cost": "paid",
+          "whyThisOne": "Higher quality, real feedback. Worth it for the final 2-3 weeks."
+        },
+        {
+          "title": "interviewing.io",
+          "url": "https://interviewing.io/",
+          "type": "tool",
+          "cost": "freemium",
+          "whyThisOne": "Anonymous mocks with real engineers. Free first interview."
+        }
+      ]
+    },
+    "tools.coding_practice": {
+      "conceptSummary": "LeetCode is the standard. Premium ($35/mo) gets company-tagged questions, which is worth it for the final month.",
+      "resources": [
+        {
+          "title": "LeetCode",
+          "url": "https://leetcode.com/",
+          "type": "tool",
+          "cost": "freemium",
+          "whyThisOne": "Standard coding practice platform."
+        },
+        {
+          "title": "NeetCode",
+          "url": "https://neetcode.io/",
+          "type": "tool",
+          "cost": "freemium",
+          "whyThisOne": "Curated lists + video solutions."
+        }
+      ]
+    }
+  }
+}

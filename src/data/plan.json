@@ -1,0 +1,1912 @@
+{
+  "phases": [
+    {
+      "id": 1,
+      "name": "Foundations & Re-acclimation",
+      "startDay": 1,
+      "endDay": 21,
+      "exitCriteria": [
+        "Mediums solvable in 30-35 minutes",
+        "Can explain consistent hashing, caching strategies, CAP without notes",
+        "7 behavioral stories drafted and recorded once each"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Depth & First Specialization (AI Infra)",
+      "startDay": 22,
+      "endDay": 42,
+      "exitCriteria": [
+        "Mediums in 25 minutes",
+        "Can design an inference API end-to-end with batching/caching/routing tradeoffs",
+        "10+ behavioral stories rehearsed, ready for any common stem",
+        "First mock interview completed"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Advanced & Integration",
+      "startDay": 43,
+      "endDay": 63,
+      "exitCriteria": [
+        "Hards approachable in 40-45 minutes",
+        "Can deliver a 45-min system design under pressure with clear tradeoffs",
+        "2 mocks per week, behavioral round included",
+        "Comfortable with DP and advanced graph patterns"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Polish & Pressure-Test",
+      "startDay": 64,
+      "endDay": 70,
+      "exitCriteria": [
+        "Full mock loop completed (2 coding + 1 SD + 1 behavioral)",
+        "Targeted weak-spot fixes, no new content",
+        "Sleep, exercise, recovery prioritized"
+      ]
+    }
+  ],
+  "days": [
+    {
+      "dayIndex": 1,
+      "phaseId": 1,
+      "weekIndex": 1,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "arrays",
+            "hashmaps",
+            "two_pointers"
+          ],
+          "targetMinutes": 35
+        },
+        "sdOrAi": {
+          "topic": "Caching basics: write-through, write-back, write-around",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "sd.caching"
+        },
+        "behavioral": {
+          "task": "Build story matrix: list every meaningful project, conflict, incident, decision from last 5 years"
+        }
+      }
+    },
+    {
+      "dayIndex": 2,
+      "phaseId": 1,
+      "weekIndex": 1,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "arrays",
+            "hashmaps",
+            "two_pointers"
+          ],
+          "targetMinutes": 35
+        },
+        "sdOrAi": {
+          "topic": "Cache eviction: LRU, LFU, ARC",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "sd.caching_eviction"
+        },
+        "behavioral": {
+          "task": "Build story matrix: list every meaningful project, conflict, incident, decision from last 5 years"
+        }
+      }
+    },
+    {
+      "dayIndex": 3,
+      "phaseId": 1,
+      "weekIndex": 1,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "arrays",
+            "hashmaps",
+            "two_pointers"
+          ],
+          "targetMinutes": 35
+        },
+        "sdOrAi": {
+          "topic": "Load balancing: L4 vs L7, algorithms",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "sd.load_balancing"
+        },
+        "behavioral": {
+          "task": "Build story matrix: list every meaningful project, conflict, incident, decision from last 5 years"
+        }
+      }
+    },
+    {
+      "dayIndex": 4,
+      "phaseId": 1,
+      "weekIndex": 1,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "arrays",
+            "hashmaps",
+            "two_pointers"
+          ],
+          "targetMinutes": 35
+        },
+        "sdOrAi": {
+          "topic": "Transformer architecture overview",
+          "track": "ai_infra",
+          "mode": "maintenance",
+          "resourceKey": "ai.transformers"
+        },
+        "behavioral": {
+          "task": "Build story matrix: list every meaningful project, conflict, incident, decision from last 5 years"
+        }
+      }
+    },
+    {
+      "dayIndex": 5,
+      "phaseId": 1,
+      "weekIndex": 1,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "arrays",
+            "hashmaps",
+            "two_pointers"
+          ],
+          "targetMinutes": 35
+        },
+        "sdOrAi": {
+          "topic": "CAP theorem and consistency models",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "sd.cap"
+        },
+        "behavioral": {
+          "task": "Build story matrix: list every meaningful project, conflict, incident, decision from last 5 years"
+        }
+      }
+    },
+    {
+      "dayIndex": 6,
+      "phaseId": 1,
+      "weekIndex": 1,
+      "isWeekend": true,
+      "targets": {
+        "dsa": {
+          "problemCount": 3,
+          "patterns": [
+            "arrays",
+            "hashmaps",
+            "two_pointers"
+          ],
+          "targetMinutes": 35
+        },
+        "sdOrAi": {
+          "topic": "Weekend deep-dive: caching layered systems",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "sd.caching"
+        },
+        "behavioral": {
+          "task": "Build story matrix: list every meaningful project, conflict, incident, decision from last 5 years"
+        }
+      }
+    },
+    {
+      "dayIndex": 7,
+      "phaseId": 1,
+      "weekIndex": 1,
+      "isWeekend": true,
+      "targets": {
+        "dsa": {
+          "problemCount": 3,
+          "patterns": [
+            "arrays",
+            "hashmaps",
+            "two_pointers"
+          ],
+          "targetMinutes": 35
+        },
+        "sdOrAi": {
+          "topic": "Weekend deep-dive: load balancer design",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "sd.load_balancing"
+        },
+        "behavioral": {
+          "task": "Build story matrix: list every meaningful project, conflict, incident, decision from last 5 years"
+        }
+      }
+    },
+    {
+      "dayIndex": 8,
+      "phaseId": 1,
+      "weekIndex": 2,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "sliding_window",
+            "stack",
+            "monotonic_stack",
+            "linked_lists",
+            "binary_search"
+          ],
+          "targetMinutes": 35
+        },
+        "sdOrAi": {
+          "topic": "SQL vs NoSQL tradeoffs",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "sd.databases"
+        },
+        "behavioral": {
+          "task": "Draft STAR outline for category: ownership"
+        }
+      }
+    },
+    {
+      "dayIndex": 9,
+      "phaseId": 1,
+      "weekIndex": 2,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "sliding_window",
+            "stack",
+            "monotonic_stack",
+            "linked_lists",
+            "binary_search"
+          ],
+          "targetMinutes": 35
+        },
+        "sdOrAi": {
+          "topic": "Database indexing fundamentals",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "sd.indexing"
+        },
+        "behavioral": {
+          "task": "Draft STAR outline for category: ambiguity"
+        }
+      }
+    },
+    {
+      "dayIndex": 10,
+      "phaseId": 1,
+      "weekIndex": 2,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "sliding_window",
+            "stack",
+            "monotonic_stack",
+            "linked_lists",
+            "binary_search"
+          ],
+          "targetMinutes": 35
+        },
+        "sdOrAi": {
+          "topic": "Replication: leader-follower, multi-leader",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "sd.replication"
+        },
+        "behavioral": {
+          "task": "Draft STAR outline for category: scaling"
+        }
+      }
+    },
+    {
+      "dayIndex": 11,
+      "phaseId": 1,
+      "weekIndex": 2,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "sliding_window",
+            "stack",
+            "monotonic_stack",
+            "linked_lists",
+            "binary_search"
+          ],
+          "targetMinutes": 35
+        },
+        "sdOrAi": {
+          "topic": "Attention mechanism deep-dive",
+          "track": "ai_infra",
+          "mode": "maintenance",
+          "resourceKey": "ai.attention"
+        },
+        "behavioral": {
+          "task": "Draft STAR outline for category: incident"
+        }
+      }
+    },
+    {
+      "dayIndex": 12,
+      "phaseId": 1,
+      "weekIndex": 2,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "sliding_window",
+            "stack",
+            "monotonic_stack",
+            "linked_lists",
+            "binary_search"
+          ],
+          "targetMinutes": 35
+        },
+        "sdOrAi": {
+          "topic": "Partitioning and sharding strategies",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "sd.partitioning"
+        },
+        "behavioral": {
+          "task": "Draft STAR outline for category: disagreement"
+        }
+      }
+    },
+    {
+      "dayIndex": 13,
+      "phaseId": 1,
+      "weekIndex": 2,
+      "isWeekend": true,
+      "targets": {
+        "dsa": {
+          "problemCount": 3,
+          "patterns": [
+            "sliding_window",
+            "stack",
+            "monotonic_stack",
+            "linked_lists",
+            "binary_search"
+          ],
+          "targetMinutes": 35
+        },
+        "sdOrAi": {
+          "topic": "Weekend: full URL shortener design",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "sd.url_shortener"
+        },
+        "behavioral": {
+          "task": "Draft STAR outline for category: mentoring"
+        }
+      }
+    },
+    {
+      "dayIndex": 14,
+      "phaseId": 1,
+      "weekIndex": 2,
+      "isWeekend": true,
+      "targets": {
+        "dsa": {
+          "problemCount": 3,
+          "patterns": [
+            "sliding_window",
+            "stack",
+            "monotonic_stack",
+            "linked_lists",
+            "binary_search"
+          ],
+          "targetMinutes": 35
+        },
+        "sdOrAi": {
+          "topic": "Weekend: URL shortener at 10x scale",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "sd.url_shortener"
+        },
+        "behavioral": {
+          "task": "Draft STAR outline for category: tech_leadership"
+        }
+      }
+    },
+    {
+      "dayIndex": 15,
+      "phaseId": 1,
+      "weekIndex": 3,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "trees",
+            "bfs_dfs",
+            "recursion"
+          ],
+          "targetMinutes": 32
+        },
+        "sdOrAi": {
+          "topic": "Consistency models: strong, eventual, causal",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "sd.consistency"
+        },
+        "behavioral": {
+          "task": "Record yourself telling one story (under 2 min). Play back. Refine."
+        }
+      }
+    },
+    {
+      "dayIndex": 16,
+      "phaseId": 1,
+      "weekIndex": 3,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "trees",
+            "bfs_dfs",
+            "recursion"
+          ],
+          "targetMinutes": 32
+        },
+        "sdOrAi": {
+          "topic": "Tokenization and embeddings",
+          "track": "ai_infra",
+          "mode": "maintenance",
+          "resourceKey": "ai.tokenization"
+        },
+        "behavioral": {
+          "task": "Record yourself telling one story (under 2 min). Play back. Refine."
+        }
+      }
+    },
+    {
+      "dayIndex": 17,
+      "phaseId": 1,
+      "weekIndex": 3,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "trees",
+            "bfs_dfs",
+            "recursion"
+          ],
+          "targetMinutes": 32
+        },
+        "sdOrAi": {
+          "topic": "Idempotency and exactly-once semantics",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "sd.idempotency"
+        },
+        "behavioral": {
+          "task": "Record yourself telling one story (under 2 min). Play back. Refine."
+        }
+      }
+    },
+    {
+      "dayIndex": 18,
+      "phaseId": 1,
+      "weekIndex": 3,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "trees",
+            "bfs_dfs",
+            "recursion"
+          ],
+          "targetMinutes": 32
+        },
+        "sdOrAi": {
+          "topic": "First design problem walkthrough: rate limiter",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "sd.rate_limiter"
+        },
+        "behavioral": {
+          "task": "Record yourself telling one story (under 2 min). Play back. Refine."
+        }
+      }
+    },
+    {
+      "dayIndex": 19,
+      "phaseId": 1,
+      "weekIndex": 3,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "trees",
+            "bfs_dfs",
+            "recursion"
+          ],
+          "targetMinutes": 32
+        },
+        "sdOrAi": {
+          "topic": "Embedding spaces and similarity",
+          "track": "ai_infra",
+          "mode": "maintenance",
+          "resourceKey": "ai.embeddings"
+        },
+        "behavioral": {
+          "task": "Record yourself telling one story (under 2 min). Play back. Refine."
+        }
+      }
+    },
+    {
+      "dayIndex": 20,
+      "phaseId": 1,
+      "weekIndex": 3,
+      "isWeekend": true,
+      "targets": {
+        "dsa": {
+          "problemCount": 3,
+          "patterns": [
+            "trees",
+            "bfs_dfs",
+            "recursion"
+          ],
+          "targetMinutes": 32
+        },
+        "sdOrAi": {
+          "topic": "Weekend: rate limiter variants (token bucket, sliding window)",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "sd.rate_limiter"
+        },
+        "behavioral": {
+          "task": "Record yourself telling one story (under 2 min). Play back. Refine."
+        }
+      }
+    },
+    {
+      "dayIndex": 21,
+      "phaseId": 1,
+      "weekIndex": 3,
+      "isWeekend": true,
+      "targets": {
+        "dsa": {
+          "problemCount": 3,
+          "patterns": [
+            "trees",
+            "bfs_dfs",
+            "recursion"
+          ],
+          "targetMinutes": 32
+        },
+        "sdOrAi": {
+          "topic": "Weekend: Phase 1 review + redesign URL shortener from scratch",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "sd.url_shortener"
+        },
+        "behavioral": {
+          "task": "Record yourself telling one story (under 2 min). Play back. Refine."
+        },
+        "mock": {
+          "type": "coding"
+        }
+      }
+    },
+    {
+      "dayIndex": 22,
+      "phaseId": 2,
+      "weekIndex": 4,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "heaps",
+            "priority_queue",
+            "intervals"
+          ],
+          "targetMinutes": 30
+        },
+        "sdOrAi": {
+          "topic": "LLM serving fundamentals: why latency matters",
+          "track": "ai_infra",
+          "mode": "primary",
+          "resourceKey": "ai.serving"
+        },
+        "behavioral": {
+          "task": "Practice delivering stories to specific question stems. Pick 2 stems, answer cold."
+        }
+      }
+    },
+    {
+      "dayIndex": 23,
+      "phaseId": 2,
+      "weekIndex": 4,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "heaps",
+            "priority_queue",
+            "intervals"
+          ],
+          "targetMinutes": 30
+        },
+        "sdOrAi": {
+          "topic": "Static batching vs continuous batching",
+          "track": "ai_infra",
+          "mode": "primary",
+          "resourceKey": "ai.continuous_batching"
+        },
+        "behavioral": {
+          "task": "Practice delivering stories to specific question stems. Pick 2 stems, answer cold."
+        }
+      }
+    },
+    {
+      "dayIndex": 24,
+      "phaseId": 2,
+      "weekIndex": 4,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "heaps",
+            "priority_queue",
+            "intervals"
+          ],
+          "targetMinutes": 30
+        },
+        "sdOrAi": {
+          "topic": "Review: caching + rate limiter",
+          "track": "sd",
+          "mode": "maintenance",
+          "resourceKey": "sd.caching"
+        },
+        "behavioral": {
+          "task": "Practice delivering stories to specific question stems. Pick 2 stems, answer cold."
+        }
+      }
+    },
+    {
+      "dayIndex": 25,
+      "phaseId": 2,
+      "weekIndex": 4,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "heaps",
+            "priority_queue",
+            "intervals"
+          ],
+          "targetMinutes": 30
+        },
+        "sdOrAi": {
+          "topic": "KV cache: what it is, why it dominates VRAM",
+          "track": "ai_infra",
+          "mode": "primary",
+          "resourceKey": "ai.kv_cache"
+        },
+        "behavioral": {
+          "task": "Practice delivering stories to specific question stems. Pick 2 stems, answer cold."
+        }
+      }
+    },
+    {
+      "dayIndex": 26,
+      "phaseId": 2,
+      "weekIndex": 4,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "heaps",
+            "priority_queue",
+            "intervals"
+          ],
+          "targetMinutes": 30
+        },
+        "sdOrAi": {
+          "topic": "Speculative decoding fundamentals",
+          "track": "ai_infra",
+          "mode": "primary",
+          "resourceKey": "ai.speculative_decoding"
+        },
+        "behavioral": {
+          "task": "Practice delivering stories to specific question stems. Pick 2 stems, answer cold."
+        }
+      }
+    },
+    {
+      "dayIndex": 27,
+      "phaseId": 2,
+      "weekIndex": 4,
+      "isWeekend": true,
+      "targets": {
+        "dsa": {
+          "problemCount": 3,
+          "patterns": [
+            "heaps",
+            "priority_queue",
+            "intervals"
+          ],
+          "targetMinutes": 30
+        },
+        "sdOrAi": {
+          "topic": "Weekend: vLLM architecture deep-dive",
+          "track": "ai_infra",
+          "mode": "primary",
+          "resourceKey": "ai.vllm"
+        },
+        "behavioral": {
+          "task": "Practice delivering stories to specific question stems. Pick 2 stems, answer cold."
+        }
+      }
+    },
+    {
+      "dayIndex": 28,
+      "phaseId": 2,
+      "weekIndex": 4,
+      "isWeekend": true,
+      "targets": {
+        "dsa": {
+          "problemCount": 3,
+          "patterns": [
+            "heaps",
+            "priority_queue",
+            "intervals"
+          ],
+          "targetMinutes": 30
+        },
+        "sdOrAi": {
+          "topic": "Weekend: design a basic inference API",
+          "track": "ai_infra",
+          "mode": "primary",
+          "resourceKey": "ai.inference_api"
+        },
+        "behavioral": {
+          "task": "Practice delivering stories to specific question stems. Pick 2 stems, answer cold."
+        },
+        "mock": {
+          "type": "coding"
+        }
+      }
+    },
+    {
+      "dayIndex": 29,
+      "phaseId": 2,
+      "weekIndex": 5,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "graphs",
+            "dijkstra",
+            "topological_sort"
+          ],
+          "targetMinutes": 30
+        },
+        "sdOrAi": {
+          "topic": "GPU architecture: VRAM, bandwidth, compute",
+          "track": "ai_infra",
+          "mode": "primary",
+          "resourceKey": "ai.gpu_systems"
+        },
+        "behavioral": {
+          "task": "Add 1-2 more stories. Cross-tag stories that fit multiple categories."
+        }
+      }
+    },
+    {
+      "dayIndex": 30,
+      "phaseId": 2,
+      "weekIndex": 5,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "graphs",
+            "dijkstra",
+            "topological_sort"
+          ],
+          "targetMinutes": 30
+        },
+        "sdOrAi": {
+          "topic": "Quantization: INT8, FP8, AWQ, GPTQ tradeoffs",
+          "track": "ai_infra",
+          "mode": "primary",
+          "resourceKey": "ai.quantization"
+        },
+        "behavioral": {
+          "task": "Add 1-2 more stories. Cross-tag stories that fit multiple categories."
+        }
+      }
+    },
+    {
+      "dayIndex": 31,
+      "phaseId": 2,
+      "weekIndex": 5,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "graphs",
+            "dijkstra",
+            "topological_sort"
+          ],
+          "targetMinutes": 30
+        },
+        "sdOrAi": {
+          "topic": "Review: replication + partitioning",
+          "track": "sd",
+          "mode": "maintenance",
+          "resourceKey": "sd.replication"
+        },
+        "behavioral": {
+          "task": "Add 1-2 more stories. Cross-tag stories that fit multiple categories."
+        }
+      }
+    },
+    {
+      "dayIndex": 32,
+      "phaseId": 2,
+      "weekIndex": 5,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "graphs",
+            "dijkstra",
+            "topological_sort"
+          ],
+          "targetMinutes": 30
+        },
+        "sdOrAi": {
+          "topic": "Multi-tenancy: noisy neighbor, fair scheduling, MIG",
+          "track": "ai_infra",
+          "mode": "primary",
+          "resourceKey": "ai.multitenancy"
+        },
+        "behavioral": {
+          "task": "Add 1-2 more stories. Cross-tag stories that fit multiple categories."
+        }
+      }
+    },
+    {
+      "dayIndex": 33,
+      "phaseId": 2,
+      "weekIndex": 5,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "graphs",
+            "dijkstra",
+            "topological_sort"
+          ],
+          "targetMinutes": 30
+        },
+        "sdOrAi": {
+          "topic": "Cost/latency tradeoffs in inference systems",
+          "track": "ai_infra",
+          "mode": "primary",
+          "resourceKey": "ai.cost_latency"
+        },
+        "behavioral": {
+          "task": "Add 1-2 more stories. Cross-tag stories that fit multiple categories."
+        }
+      }
+    },
+    {
+      "dayIndex": 34,
+      "phaseId": 2,
+      "weekIndex": 5,
+      "isWeekend": true,
+      "targets": {
+        "dsa": {
+          "problemCount": 3,
+          "patterns": [
+            "graphs",
+            "dijkstra",
+            "topological_sort"
+          ],
+          "targetMinutes": 30
+        },
+        "sdOrAi": {
+          "topic": "Weekend: full inference API design with tradeoffs",
+          "track": "ai_infra",
+          "mode": "primary",
+          "resourceKey": "ai.inference_api"
+        },
+        "behavioral": {
+          "task": "Add 1-2 more stories. Cross-tag stories that fit multiple categories."
+        }
+      }
+    },
+    {
+      "dayIndex": 35,
+      "phaseId": 2,
+      "weekIndex": 5,
+      "isWeekend": true,
+      "targets": {
+        "dsa": {
+          "problemCount": 3,
+          "patterns": [
+            "graphs",
+            "dijkstra",
+            "topological_sort"
+          ],
+          "targetMinutes": 30
+        },
+        "sdOrAi": {
+          "topic": "Weekend: redesign inference API for 100x scale",
+          "track": "ai_infra",
+          "mode": "primary",
+          "resourceKey": "ai.inference_api"
+        },
+        "behavioral": {
+          "task": "Add 1-2 more stories. Cross-tag stories that fit multiple categories."
+        },
+        "mock": {
+          "type": "coding"
+        }
+      }
+    },
+    {
+      "dayIndex": 36,
+      "phaseId": 2,
+      "weekIndex": 6,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "backtracking",
+            "tries",
+            "union_find"
+          ],
+          "targetMinutes": 28
+        },
+        "sdOrAi": {
+          "topic": "Tensor parallelism",
+          "track": "ai_infra",
+          "mode": "primary",
+          "resourceKey": "ai.tensor_parallelism"
+        },
+        "behavioral": {
+          "task": "Pair stories to common stems: 'tell me about a time you failed', 'disagreement with manager', etc."
+        }
+      }
+    },
+    {
+      "dayIndex": 37,
+      "phaseId": 2,
+      "weekIndex": 6,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "backtracking",
+            "tries",
+            "union_find"
+          ],
+          "targetMinutes": 28
+        },
+        "sdOrAi": {
+          "topic": "Pipeline parallelism",
+          "track": "ai_infra",
+          "mode": "primary",
+          "resourceKey": "ai.pipeline_parallelism"
+        },
+        "behavioral": {
+          "task": "Pair stories to common stems: 'tell me about a time you failed', 'disagreement with manager', etc."
+        }
+      }
+    },
+    {
+      "dayIndex": 38,
+      "phaseId": 2,
+      "weekIndex": 6,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "backtracking",
+            "tries",
+            "union_find"
+          ],
+          "targetMinutes": 28
+        },
+        "sdOrAi": {
+          "topic": "Review: rate limiter + idempotency",
+          "track": "sd",
+          "mode": "maintenance",
+          "resourceKey": "sd.rate_limiter"
+        },
+        "behavioral": {
+          "task": "Pair stories to common stems: 'tell me about a time you failed', 'disagreement with manager', etc."
+        }
+      }
+    },
+    {
+      "dayIndex": 39,
+      "phaseId": 2,
+      "weekIndex": 6,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "backtracking",
+            "tries",
+            "union_find"
+          ],
+          "targetMinutes": 28
+        },
+        "sdOrAi": {
+          "topic": "Model sharding strategies",
+          "track": "ai_infra",
+          "mode": "primary",
+          "resourceKey": "ai.model_sharding"
+        },
+        "behavioral": {
+          "task": "Pair stories to common stems: 'tell me about a time you failed', 'disagreement with manager', etc."
+        }
+      }
+    },
+    {
+      "dayIndex": 40,
+      "phaseId": 2,
+      "weekIndex": 6,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "backtracking",
+            "tries",
+            "union_find"
+          ],
+          "targetMinutes": 28
+        },
+        "sdOrAi": {
+          "topic": "Eval infrastructure: how do you know you regressed?",
+          "track": "ai_infra",
+          "mode": "primary",
+          "resourceKey": "ai.eval_infra"
+        },
+        "behavioral": {
+          "task": "Pair stories to common stems: 'tell me about a time you failed', 'disagreement with manager', etc."
+        }
+      }
+    },
+    {
+      "dayIndex": 41,
+      "phaseId": 2,
+      "weekIndex": 6,
+      "isWeekend": true,
+      "targets": {
+        "dsa": {
+          "problemCount": 3,
+          "patterns": [
+            "backtracking",
+            "tries",
+            "union_find"
+          ],
+          "targetMinutes": 28
+        },
+        "sdOrAi": {
+          "topic": "Weekend: design a multi-model serving gateway",
+          "track": "ai_infra",
+          "mode": "primary",
+          "resourceKey": "ai.model_gateway"
+        },
+        "behavioral": {
+          "task": "Pair stories to common stems: 'tell me about a time you failed', 'disagreement with manager', etc."
+        }
+      }
+    },
+    {
+      "dayIndex": 42,
+      "phaseId": 2,
+      "weekIndex": 6,
+      "isWeekend": true,
+      "targets": {
+        "dsa": {
+          "problemCount": 3,
+          "patterns": [
+            "backtracking",
+            "tries",
+            "union_find"
+          ],
+          "targetMinutes": 28
+        },
+        "sdOrAi": {
+          "topic": "Weekend: Phase 2 review + mock SD interview",
+          "track": "ai_infra",
+          "mode": "primary",
+          "resourceKey": "ai.inference_api"
+        },
+        "behavioral": {
+          "task": "Pair stories to common stems: 'tell me about a time you failed', 'disagreement with manager', etc."
+        },
+        "mock": {
+          "type": "sd"
+        }
+      }
+    },
+    {
+      "dayIndex": 43,
+      "phaseId": 3,
+      "weekIndex": 7,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "dp_1d",
+            "dp_2d",
+            "lis",
+            "coin_change",
+            "edit_distance"
+          ],
+          "targetMinutes": 30
+        },
+        "sdOrAi": {
+          "topic": "Pub/sub patterns and message queues",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "sd.pubsub"
+        },
+        "behavioral": {
+          "task": "Daily rehearsal: cycle through 2 stories cold. Record the weakest one."
+        }
+      }
+    },
+    {
+      "dayIndex": 44,
+      "phaseId": 3,
+      "weekIndex": 7,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "dp_1d",
+            "dp_2d",
+            "lis",
+            "coin_change",
+            "edit_distance"
+          ],
+          "targetMinutes": 30
+        },
+        "sdOrAi": {
+          "topic": "Retries, backoff, dead letter queues",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "sd.retries"
+        },
+        "behavioral": {
+          "task": "Daily rehearsal: cycle through 2 stories cold. Record the weakest one."
+        }
+      }
+    },
+    {
+      "dayIndex": 45,
+      "phaseId": 3,
+      "weekIndex": 7,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "dp_1d",
+            "dp_2d",
+            "lis",
+            "coin_change",
+            "edit_distance"
+          ],
+          "targetMinutes": 30
+        },
+        "sdOrAi": {
+          "topic": "RAG: chunking, hybrid search, reranking",
+          "track": "ai_infra",
+          "mode": "maintenance",
+          "resourceKey": "ai.rag"
+        },
+        "behavioral": {
+          "task": "Daily rehearsal: cycle through 2 stories cold. Record the weakest one."
+        }
+      }
+    },
+    {
+      "dayIndex": 46,
+      "phaseId": 3,
+      "weekIndex": 7,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "dp_1d",
+            "dp_2d",
+            "lis",
+            "coin_change",
+            "edit_distance"
+          ],
+          "targetMinutes": 30
+        },
+        "sdOrAi": {
+          "topic": "Backpressure and flow control",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "sd.backpressure"
+        },
+        "behavioral": {
+          "task": "Daily rehearsal: cycle through 2 stories cold. Record the weakest one."
+        },
+        "mock": {
+          "type": "behavioral"
+        }
+      }
+    },
+    {
+      "dayIndex": 47,
+      "phaseId": 3,
+      "weekIndex": 7,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "dp_1d",
+            "dp_2d",
+            "lis",
+            "coin_change",
+            "edit_distance"
+          ],
+          "targetMinutes": 30
+        },
+        "sdOrAi": {
+          "topic": "Design notification system (walkthrough)",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "sd.notifications"
+        },
+        "behavioral": {
+          "task": "Daily rehearsal: cycle through 2 stories cold. Record the weakest one."
+        }
+      }
+    },
+    {
+      "dayIndex": 48,
+      "phaseId": 3,
+      "weekIndex": 7,
+      "isWeekend": true,
+      "targets": {
+        "dsa": {
+          "problemCount": 3,
+          "patterns": [
+            "dp_1d",
+            "dp_2d",
+            "lis",
+            "coin_change",
+            "edit_distance"
+          ],
+          "targetMinutes": 30
+        },
+        "sdOrAi": {
+          "topic": "Weekend: notification system at scale",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "sd.notifications"
+        },
+        "behavioral": {
+          "task": "Daily rehearsal: cycle through 2 stories cold. Record the weakest one."
+        }
+      }
+    },
+    {
+      "dayIndex": 49,
+      "phaseId": 3,
+      "weekIndex": 7,
+      "isWeekend": true,
+      "targets": {
+        "dsa": {
+          "problemCount": 3,
+          "patterns": [
+            "dp_1d",
+            "dp_2d",
+            "lis",
+            "coin_change",
+            "edit_distance"
+          ],
+          "targetMinutes": 30
+        },
+        "sdOrAi": {
+          "topic": "Weekend: design distributed task queue",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "sd.task_queue"
+        },
+        "behavioral": {
+          "task": "Daily rehearsal: cycle through 2 stories cold. Record the weakest one."
+        },
+        "mock": {
+          "type": "sd"
+        }
+      }
+    },
+    {
+      "dayIndex": 50,
+      "phaseId": 3,
+      "weekIndex": 8,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "graphs_advanced",
+            "shortest_paths",
+            "mst"
+          ],
+          "targetMinutes": 28
+        },
+        "sdOrAi": {
+          "topic": "Sharding strategies in depth",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "sd.partitioning"
+        },
+        "behavioral": {
+          "task": "Daily rehearsal: cycle through 2 stories cold. Record the weakest one."
+        }
+      }
+    },
+    {
+      "dayIndex": 51,
+      "phaseId": 3,
+      "weekIndex": 8,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "graphs_advanced",
+            "shortest_paths",
+            "mst"
+          ],
+          "targetMinutes": 28
+        },
+        "sdOrAi": {
+          "topic": "Observability: metrics, logs, traces",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "sd.observability"
+        },
+        "behavioral": {
+          "task": "Daily rehearsal: cycle through 2 stories cold. Record the weakest one."
+        }
+      }
+    },
+    {
+      "dayIndex": 52,
+      "phaseId": 3,
+      "weekIndex": 8,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "graphs_advanced",
+            "shortest_paths",
+            "mst"
+          ],
+          "targetMinutes": 28
+        },
+        "sdOrAi": {
+          "topic": "Agent orchestration patterns",
+          "track": "ai_infra",
+          "mode": "maintenance",
+          "resourceKey": "ai.agents"
+        },
+        "behavioral": {
+          "task": "Daily rehearsal: cycle through 2 stories cold. Record the weakest one."
+        }
+      }
+    },
+    {
+      "dayIndex": 53,
+      "phaseId": 3,
+      "weekIndex": 8,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "graphs_advanced",
+            "shortest_paths",
+            "mst"
+          ],
+          "targetMinutes": 28
+        },
+        "sdOrAi": {
+          "topic": "Design Twitter/X feed (walkthrough)",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "sd.twitter_feed"
+        },
+        "behavioral": {
+          "task": "Daily rehearsal: cycle through 2 stories cold. Record the weakest one."
+        },
+        "mock": {
+          "type": "behavioral"
+        }
+      }
+    },
+    {
+      "dayIndex": 54,
+      "phaseId": 3,
+      "weekIndex": 8,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "graphs_advanced",
+            "shortest_paths",
+            "mst"
+          ],
+          "targetMinutes": 28
+        },
+        "sdOrAi": {
+          "topic": "Fanout strategies: push vs pull vs hybrid",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "sd.twitter_feed"
+        },
+        "behavioral": {
+          "task": "Daily rehearsal: cycle through 2 stories cold. Record the weakest one."
+        }
+      }
+    },
+    {
+      "dayIndex": 55,
+      "phaseId": 3,
+      "weekIndex": 8,
+      "isWeekend": true,
+      "targets": {
+        "dsa": {
+          "problemCount": 3,
+          "patterns": [
+            "graphs_advanced",
+            "shortest_paths",
+            "mst"
+          ],
+          "targetMinutes": 28
+        },
+        "sdOrAi": {
+          "topic": "Weekend: Twitter feed at celebrity-scale fanout",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "sd.twitter_feed"
+        },
+        "behavioral": {
+          "task": "Daily rehearsal: cycle through 2 stories cold. Record the weakest one."
+        }
+      }
+    },
+    {
+      "dayIndex": 56,
+      "phaseId": 3,
+      "weekIndex": 8,
+      "isWeekend": true,
+      "targets": {
+        "dsa": {
+          "problemCount": 3,
+          "patterns": [
+            "graphs_advanced",
+            "shortest_paths",
+            "mst"
+          ],
+          "targetMinutes": 28
+        },
+        "sdOrAi": {
+          "topic": "Weekend: design Dropbox/file sync",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "sd.dropbox"
+        },
+        "behavioral": {
+          "task": "Daily rehearsal: cycle through 2 stories cold. Record the weakest one."
+        },
+        "mock": {
+          "type": "sd"
+        }
+      }
+    },
+    {
+      "dayIndex": 57,
+      "phaseId": 3,
+      "weekIndex": 9,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "mixed_review",
+            "hard_problems"
+          ],
+          "targetMinutes": 35
+        },
+        "sdOrAi": {
+          "topic": "API gateway design",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "sd.api_gateway"
+        },
+        "behavioral": {
+          "task": "Mock-style behavioral round. Have someone (or yourself) ask 4 questions back-to-back."
+        }
+      }
+    },
+    {
+      "dayIndex": 58,
+      "phaseId": 3,
+      "weekIndex": 9,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "mixed_review",
+            "hard_problems"
+          ],
+          "targetMinutes": 35
+        },
+        "sdOrAi": {
+          "topic": "Design ride-sharing backend",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "sd.ride_sharing"
+        },
+        "behavioral": {
+          "task": "Mock-style behavioral round. Have someone (or yourself) ask 4 questions back-to-back."
+        }
+      }
+    },
+    {
+      "dayIndex": 59,
+      "phaseId": 3,
+      "weekIndex": 9,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "mixed_review",
+            "hard_problems"
+          ],
+          "targetMinutes": 35
+        },
+        "sdOrAi": {
+          "topic": "Vector DB internals: HNSW, IVF",
+          "track": "ai_infra",
+          "mode": "maintenance",
+          "resourceKey": "ai.vector_db"
+        },
+        "behavioral": {
+          "task": "Mock-style behavioral round. Have someone (or yourself) ask 4 questions back-to-back."
+        }
+      }
+    },
+    {
+      "dayIndex": 60,
+      "phaseId": 3,
+      "weekIndex": 9,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "mixed_review",
+            "hard_problems"
+          ],
+          "targetMinutes": 35
+        },
+        "sdOrAi": {
+          "topic": "Design ChatGPT backend (AI-flavored SD)",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "ai.chatgpt_backend"
+        },
+        "behavioral": {
+          "task": "Mock-style behavioral round. Have someone (or yourself) ask 4 questions back-to-back."
+        },
+        "mock": {
+          "type": "behavioral"
+        }
+      }
+    },
+    {
+      "dayIndex": 61,
+      "phaseId": 3,
+      "weekIndex": 9,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "mixed_review",
+            "hard_problems"
+          ],
+          "targetMinutes": 35
+        },
+        "sdOrAi": {
+          "topic": "Design RAG platform end-to-end",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "ai.rag_platform"
+        },
+        "behavioral": {
+          "task": "Mock-style behavioral round. Have someone (or yourself) ask 4 questions back-to-back."
+        }
+      }
+    },
+    {
+      "dayIndex": 62,
+      "phaseId": 3,
+      "weekIndex": 9,
+      "isWeekend": true,
+      "targets": {
+        "dsa": {
+          "problemCount": 3,
+          "patterns": [
+            "mixed_review",
+            "hard_problems"
+          ],
+          "targetMinutes": 35
+        },
+        "sdOrAi": {
+          "topic": "Weekend: full mock SD round + self-review",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "sd.url_shortener"
+        },
+        "behavioral": {
+          "task": "Mock-style behavioral round. Have someone (or yourself) ask 4 questions back-to-back."
+        }
+      }
+    },
+    {
+      "dayIndex": 63,
+      "phaseId": 3,
+      "weekIndex": 9,
+      "isWeekend": true,
+      "targets": {
+        "dsa": {
+          "problemCount": 3,
+          "patterns": [
+            "mixed_review",
+            "hard_problems"
+          ],
+          "targetMinutes": 35
+        },
+        "sdOrAi": {
+          "topic": "Weekend: Phase 3 review",
+          "track": "sd",
+          "mode": "primary",
+          "resourceKey": "sd.url_shortener"
+        },
+        "behavioral": {
+          "task": "Mock-style behavioral round. Have someone (or yourself) ask 4 questions back-to-back."
+        },
+        "mock": {
+          "type": "sd"
+        }
+      }
+    },
+    {
+      "dayIndex": 64,
+      "phaseId": 4,
+      "weekIndex": 10,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 1,
+          "patterns": [
+            "mixed_review"
+          ],
+          "targetMinutes": 25
+        },
+        "sdOrAi": {
+          "topic": "Light review: weakest SD topic from Phase 3",
+          "track": "sd",
+          "mode": "maintenance",
+          "resourceKey": "sd.url_shortener"
+        },
+        "behavioral": {
+          "task": "Light rehearsal only. Trust the prep."
+        }
+      }
+    },
+    {
+      "dayIndex": 65,
+      "phaseId": 4,
+      "weekIndex": 10,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 1,
+          "patterns": [
+            "mixed_review"
+          ],
+          "targetMinutes": 25
+        },
+        "sdOrAi": {
+          "topic": "Light review: weakest AI infra topic",
+          "track": "ai_infra",
+          "mode": "maintenance",
+          "resourceKey": "ai.inference_api"
+        },
+        "behavioral": {
+          "task": "Light rehearsal only. Trust the prep."
+        }
+      }
+    },
+    {
+      "dayIndex": 66,
+      "phaseId": 4,
+      "weekIndex": 10,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 1,
+          "patterns": [
+            "mixed_review"
+          ],
+          "targetMinutes": 25
+        },
+        "sdOrAi": {
+          "topic": "Full mock loop midweek",
+          "track": "sd",
+          "mode": "maintenance",
+          "resourceKey": "sd.url_shortener"
+        },
+        "behavioral": {
+          "task": "Light rehearsal only. Trust the prep."
+        },
+        "mock": {
+          "type": "full_loop"
+        }
+      }
+    },
+    {
+      "dayIndex": 67,
+      "phaseId": 4,
+      "weekIndex": 10,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 1,
+          "patterns": [
+            "mixed_review"
+          ],
+          "targetMinutes": 25
+        },
+        "sdOrAi": {
+          "topic": "Targeted fix from mock feedback",
+          "track": "ai_infra",
+          "mode": "maintenance",
+          "resourceKey": "ai.inference_api"
+        },
+        "behavioral": {
+          "task": "Light rehearsal only. Trust the prep."
+        }
+      }
+    },
+    {
+      "dayIndex": 68,
+      "phaseId": 4,
+      "weekIndex": 10,
+      "isWeekend": false,
+      "targets": {
+        "dsa": {
+          "problemCount": 1,
+          "patterns": [
+            "mixed_review"
+          ],
+          "targetMinutes": 25
+        },
+        "sdOrAi": {
+          "topic": "Targeted fix from mock feedback",
+          "track": "sd",
+          "mode": "maintenance",
+          "resourceKey": "sd.url_shortener"
+        },
+        "behavioral": {
+          "task": "Light rehearsal only. Trust the prep."
+        }
+      }
+    },
+    {
+      "dayIndex": 69,
+      "phaseId": 4,
+      "weekIndex": 10,
+      "isWeekend": true,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "mixed_review"
+          ],
+          "targetMinutes": 25
+        },
+        "sdOrAi": {
+          "topic": "Light review only, no new content",
+          "track": "sd",
+          "mode": "maintenance",
+          "resourceKey": "sd.url_shortener"
+        },
+        "behavioral": {
+          "task": "Light rehearsal only. Trust the prep."
+        }
+      }
+    },
+    {
+      "dayIndex": 70,
+      "phaseId": 4,
+      "weekIndex": 10,
+      "isWeekend": true,
+      "targets": {
+        "dsa": {
+          "problemCount": 2,
+          "patterns": [
+            "mixed_review"
+          ],
+          "targetMinutes": 25
+        },
+        "sdOrAi": {
+          "topic": "Rest, hydrate, sleep",
+          "track": "sd",
+          "mode": "maintenance",
+          "resourceKey": "sd.url_shortener"
+        },
+        "behavioral": {
+          "task": "Light rehearsal only. Trust the prep."
+        }
+      }
+    }
+  ]
+}
