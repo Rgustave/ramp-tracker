@@ -15,6 +15,20 @@ const LOADING = Symbol('loading');
 export default function App() {
   const settings = useLiveQuery(() => db.settings.get(SETTINGS_ID), [], LOADING as unknown as undefined);
   const [view, setView] = useState<View>('today');
+  const [history, setHistory] = useState<View[]>([]);
+
+  function navigate(v: View) {
+    setHistory((h) => [...h, view]);
+    setView(v);
+  }
+
+  function goBack() {
+    setHistory((h) => {
+      const prev = h[h.length - 1];
+      if (prev) setView(prev);
+      return h.slice(0, -1);
+    });
+  }
 
   // If settings exists but somehow seeded=false, re-seed.
   useEffect(() => {
@@ -39,7 +53,7 @@ export default function App() {
 
   return (
     <div className="min-h-full">
-      <Nav current={view} onChange={setView} dayIndex={dayIndex} />
+      <Nav current={view} onChange={navigate} dayIndex={dayIndex} canGoBack={history.length > 0} onBack={goBack} />
       <main>
         {view === 'today' && <Today dayIndex={dayIndex} />}
         {view === 'week' && <WeekReview dayIndex={dayIndex} />}

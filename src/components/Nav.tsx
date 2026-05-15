@@ -7,6 +7,8 @@ type Props = {
   current: View;
   onChange: (v: View) => void;
   dayIndex: number;
+  canGoBack?: boolean;
+  onBack?: () => void;
 };
 
 const ITEMS: { id: View; label: string }[] = [
@@ -16,12 +18,25 @@ const ITEMS: { id: View; label: string }[] = [
   { id: 'stories', label: 'Stories' },
 ];
 
-export function Nav({ current, onChange, dayIndex }: Props) {
+export function Nav({ current, onChange, dayIndex, canGoBack, onBack }: Props) {
   const { theme, toggle } = useTheme();
   return (
     <header className="sticky top-0 z-30 border-b border-zinc-200 bg-white/85 backdrop-blur dark:border-zinc-800 dark:bg-zinc-950/80">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3 sm:px-6">
         <div className="flex items-center gap-3">
+          <button
+            onClick={onBack}
+            disabled={!canGoBack}
+            aria-label="Go back"
+            className={cn(
+              'inline-flex h-7 w-7 items-center justify-center rounded-md transition-colors',
+              canGoBack
+                ? 'text-zinc-700 hover:bg-zinc-100 dark:text-zinc-300 dark:hover:bg-zinc-800'
+                : 'cursor-not-allowed text-zinc-300 dark:text-zinc-600'
+            )}
+          >
+            ←
+          </button>
           <span className="text-sm font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
             Ramp Tracker
           </span>
