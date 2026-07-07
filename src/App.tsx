@@ -9,6 +9,7 @@ import { Today } from './components/Today';
 import { PlanView } from './components/PlanView';
 import { Stories } from './components/Stories';
 import { WeekReview } from './components/WeekReview';
+import { SettingsModal } from './components/SettingsModal';
 
 const LOADING = Symbol('loading');
 
@@ -16,6 +17,7 @@ export default function App() {
   const settings = useLiveQuery(() => db.settings.get(SETTINGS_ID), [], LOADING as unknown as undefined);
   const [view, setView] = useState<View>('today');
   const [history, setHistory] = useState<View[]>([]);
+  const [showSettings, setShowSettings] = useState(false);
 
   function navigate(v: View) {
     setHistory((h) => [...h, view]);
@@ -53,13 +55,31 @@ export default function App() {
 
   return (
     <div className="min-h-full">
-      <Nav current={view} onChange={navigate} dayIndex={dayIndex} canGoBack={history.length > 0} onBack={goBack} />
+      <Nav
+        current={view}
+        onChange={navigate}
+        dayIndex={dayIndex}
+        canGoBack={history.length > 0}
+        onBack={goBack}
+        onOpenSettings={() => setShowSettings(true)}
+      />
       <main>
         {view === 'today' && <Today dayIndex={dayIndex} />}
         {view === 'week' && <WeekReview dayIndex={dayIndex} />}
         {view === 'plan' && <PlanView currentDayIndex={dayIndex} />}
         {view === 'stories' && <Stories />}
       </main>
+      <SettingsModal
+        open={showSettings}
+        onClose={() => setShowSettings(false)}
+        startDate={settings.startDate}
+        currentDayIndex={dayIndex}
+        onStartedOver={() => {
+          setShowSettings(false);
+          setView('today');
+          setHistory([]);
+        }}
+      />
     </div>
   );
 }

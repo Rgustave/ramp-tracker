@@ -24,3 +24,9 @@ export function computeDayIndex(startDateISO: string, today: Date = new Date()):
 export function clampDayIndex(n: number): number {
   return Math.min(70, Math.max(1, n));
 }
+
+export function dateForDayIndex(startDateISO: string, dayIndex: number): string {
+  const start = parseISO(startDateISO);
+  start.setDate(start.getDate() + (dayIndex - 1));
+  return todayISO(start);
+}

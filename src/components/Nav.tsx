@@ -9,6 +9,7 @@ type Props = {
   dayIndex: number;
   canGoBack?: boolean;
   onBack?: () => void;
+  onOpenSettings?: () => void;
 };
 
 const ITEMS: { id: View; label: string }[] = [
@@ -18,7 +19,7 @@ const ITEMS: { id: View; label: string }[] = [
   { id: 'stories', label: 'Stories' },
 ];
 
-export function Nav({ current, onChange, dayIndex, canGoBack, onBack }: Props) {
+export function Nav({ current, onChange, dayIndex, canGoBack, onBack, onOpenSettings }: Props) {
   const { theme, toggle } = useTheme();
   return (
     <header className="sticky top-0 z-30 border-b border-zinc-200 bg-white/85 backdrop-blur dark:border-zinc-800 dark:bg-zinc-950/80">
@@ -64,6 +65,14 @@ export function Nav({ current, onChange, dayIndex, canGoBack, onBack }: Props) {
             className="ml-2 inline-flex h-8 w-8 items-center justify-center rounded-md text-zinc-700 hover:bg-zinc-100 dark:text-zinc-300 dark:hover:bg-zinc-800"
           >
             {theme === 'dark' ? '☀' : '☾'}
+          </button>
+          <button
+            onClick={onOpenSettings}
+            aria-label="Settings"
+            title="Settings & reset"
+            className="inline-flex h-8 w-8 items-center justify-center rounded-md text-zinc-700 hover:bg-zinc-100 dark:text-zinc-300 dark:hover:bg-zinc-800"
+          >
+            ⚙
           </button>
         </nav>
       </div>
