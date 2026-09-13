@@ -66,6 +66,9 @@ export function WeekReview({ dayIndex }: Props) {
   const commMinutes = last7Comm.reduce((a, e) => a + e.durationMinutes, 0);
   const frontierRatings = withinDays(dayLogs, 7).flatMap((entry) => entry.trackRatings.frontier ? [entry.trackRatings.frontier] : []);
   const frontierAvg = frontierRatings.length ? frontierRatings.reduce((a, n) => a + n, 0) / frontierRatings.length : 0;
+  const recentDayLogs = withinDays(dayLogs, 7);
+  const proofDays = recentDayLogs.filter((entry) => entry.proofPassed).length;
+  const evidenceDays = recentDayLogs.filter((entry) => entry.evidence?.trim()).length;
 
   const warnings = todayPlan ? detectDrift(todayPlan, logs) : [];
 
@@ -137,6 +140,8 @@ export function WeekReview({ dayIndex }: Props) {
           <Stat label="Minutes practiced" value={`${commMinutes}m`} />
         </MetricCard>
         <MetricCard title="Frontier mission">
+          <Stat label="Proof-standard days" value={`${proofDays}/7`} hint="target ≥5" />
+          <Stat label="Evidence recorded" value={String(evidenceDays)} />
           <Stat label="Days rated" value={String(frontierRatings.length)} />
           <Stat label="Avg execution" value={frontierAvg ? frontierAvg.toFixed(1) : '—'} hint="target ≥4.0" />
           <p className="pt-2 text-xs leading-5 text-zinc-500">Rate shipped evidence, reproducibility, and technical depth—not effort.</p>
@@ -163,6 +168,7 @@ export function WeekReview({ dayIndex }: Props) {
                 const existing = await db.dayLogs.get(dayIndex);
                 const merged = (existing?.notes ? existing.notes + '\n\n' : '') + `[week-review] ${reflection.trim()}`;
                 await db.dayLogs.put({
+                  ...existing,
                   dayIndex,
                   date: existing?.date ?? new Date().toISOString().slice(0, 10),
                   hoursLogged: existing?.hoursLogged ?? 0,

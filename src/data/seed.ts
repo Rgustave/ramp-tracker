@@ -4,6 +4,7 @@ import resourcesJson from './resources.json';
 import { BEHAVIORAL_CATEGORIES } from '../types';
 import type { DayPlan, Phase, ResourceEntry, Story, BehavioralCategory } from '../types';
 import { FRONTIER_DAILY_FOCUS, FRONTIER_PHASES } from './frontierDailyPlan';
+import { FRONTIER_RESOURCES } from './frontierCurriculum';
 
 type PlanFile = { phases: Phase[]; days: DayPlan[] };
 type ResourcesFile = { entries: Record<string, ResourceEntry> };
@@ -18,6 +19,7 @@ export const PLAN: PlanFile = {
       dsa: { ...day.targets.dsa, problemCount: day.isWeekend ? 2 : 1 },
       sdOrAi: {
         ...FRONTIER_DAILY_FOCUS[index],
+        resourceKey: `frontier.day${index + 1}`,
       },
     },
   })),
@@ -26,7 +28,7 @@ export const RESOURCES: ResourcesFile = resourcesJson as unknown as ResourcesFil
 
 export function getResource(key: string | undefined): ResourceEntry | undefined {
   if (!key) return undefined;
-  return RESOURCES.entries[key];
+  return FRONTIER_RESOURCES[key] ?? RESOURCES.entries[key];
 }
 
 function newStoryTemplate(category: BehavioralCategory, idx: number): Story {

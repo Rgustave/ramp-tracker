@@ -91,6 +91,7 @@ export function Today({ dayIndex }: Props) {
             {todayPlan.isWeekend ? <Badge tone="default">Weekend</Badge> : null}
             {todayPlan.targets.mock ? <Badge tone="warn">Mock today: {todayPlan.targets.mock.type}</Badge> : null}
             {dayLog?.completed ? <Badge tone="success">Day complete</Badge> : null}
+            {dayLog?.proofPassed ? <Badge tone="warn">Proof verified</Badge> : null}
           </div>
         </div>
         <div className="min-w-32 border-l border-zinc-700 pl-5 text-left sm:text-right">
@@ -177,8 +178,8 @@ export function Today({ dayIndex }: Props) {
           <div className="flex flex-col items-stretch justify-between gap-3 sm:flex-row sm:items-center">
             <div className="text-sm text-zinc-600 dark:text-zinc-400">
               {dayLog?.completed
-                ? 'Day already marked complete. You can update it.'
-                : 'Done for the day? Mark it complete and rate honestly.'}
+                ? dayLog.proofPassed ? 'Day complete with evidence against the proof standard.' : 'Day complete. Add evidence once the proof standard is met.'
+                : 'Done for the day? Record the artifact, test it against the proof standard, and rate honestly.'}
             </div>
             <Button size="lg" onClick={() => setShowEod(true)}>
               {dayLog?.completed ? 'Update day log' : 'Mark day complete'}

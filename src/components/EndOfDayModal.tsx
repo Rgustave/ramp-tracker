@@ -18,6 +18,8 @@ type RatingState = Partial<Record<RatingKey, number>>;
 export function EndOfDayModal({ open, onClose, dayIndex, todayPlan, existing }: Props) {
   const [hoursLogged, setHoursLogged] = useState<number>(existing?.hoursLogged ?? 3);
   const [notes, setNotes] = useState(existing?.notes ?? '');
+  const [proofPassed, setProofPassed] = useState(existing?.proofPassed ?? false);
+  const [evidence, setEvidence] = useState(existing?.evidence ?? '');
   const [ratings, setRatings] = useState<RatingState>(existing?.trackRatings ?? {});
   const [saving, setSaving] = useState(false);
 
@@ -25,6 +27,8 @@ export function EndOfDayModal({ open, onClose, dayIndex, todayPlan, existing }: 
     if (open) {
       setHoursLogged(existing?.hoursLogged ?? 3);
       setNotes(existing?.notes ?? '');
+      setProofPassed(existing?.proofPassed ?? false);
+      setEvidence(existing?.evidence ?? '');
       setRatings(existing?.trackRatings ?? {});
     }
   }, [open, existing]);
@@ -45,6 +49,8 @@ export function EndOfDayModal({ open, onClose, dayIndex, todayPlan, existing }: 
       date: todayISO(),
       hoursLogged,
       completed: true,
+      proofPassed,
+      evidence: evidence.trim() || undefined,
       trackRatings: ratings,
       notes: notes.trim() || undefined,
     };
@@ -122,6 +128,29 @@ export function EndOfDayModal({ open, onClose, dayIndex, todayPlan, existing }: 
             onChange={(e) => setNotes(e.target.value)}
           />
         </Field>
+        <div className="rounded-lg border border-zinc-200 bg-zinc-50 p-4 dark:border-zinc-800 dark:bg-zinc-950">
+          <label className="flex cursor-pointer items-start gap-3">
+            <input
+              type="checkbox"
+              checked={proofPassed}
+              onChange={(e) => setProofPassed(e.target.checked)}
+              className="mt-0.5 h-4 w-4 accent-amber-500"
+            />
+            <span>
+              <span className="block text-sm font-semibold text-zinc-900 dark:text-zinc-100">Proof standard met</span>
+              <span className="mt-0.5 block text-xs leading-5 text-zinc-600 dark:text-zinc-400">Check this only if today’s artifact passes the “Done when” test in the learning brief.</span>
+            </span>
+          </label>
+          <div className="mt-3">
+            <Field label="Evidence — artifact link, commit, benchmark, or review note">
+              <Input
+                value={evidence}
+                onChange={(e) => setEvidence(e.target.value)}
+                placeholder="https://github.com/… or a precise note"
+              />
+            </Field>
+          </div>
+        </div>
       </div>
     </Modal>
   );
