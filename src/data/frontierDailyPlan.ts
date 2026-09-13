@@ -2,8 +2,8 @@ import type { Mode, Phase, Track } from '../types';
 
 export const FRONTIER_PHASES: Phase[] = [
   { id: 1, name: 'Core Engineering & AI Fluency', startDay: 1, endDay: 21, exitCriteria: ['Solve medium coding problems clearly in 30–35 minutes', 'Build reliable Python and TypeScript AI prototypes with evals', 'Complete two substantive code reviews and two externally reviewed baseline mocks'] },
-  { id: 2, name: 'ML Systems & Applied AI Depth', startDay: 22, endDay: 42, exitCriteria: ['Explain training and inference bottlenecks from model code to production service', 'Ship one evaluated, observable AI system with documented safety boundaries', 'Publish a reproducible experiment or open-source engineering artifact'] },
-  { id: 3, name: 'Specialization & Integrated Delivery', startDay: 43, endDay: 63, exitCriteria: ['Demonstrate depth in one lane and working fluency across the others', 'Turn ambiguity into an experiment, system, or customer pilot with measurable outcomes', 'Pass external coding, ML-systems, applied-AI, and behavioral reviews'] },
+  { id: 2, name: 'ML Systems & Applied AI Depth', startDay: 22, endDay: 42, exitCriteria: ['Explain training and inference bottlenecks from model code to production service', 'Ship one evaluated, observable, accessible AI system with documented safety boundaries', 'Publish a reproducible experiment or open-source engineering artifact'] },
+  { id: 3, name: 'Specialization & Integrated Delivery', startDay: 43, endDay: 63, exitCriteria: ['Demonstrate depth in one lane and working fluency across the others', 'Lead a design or code review from ambiguity to a documented decision', 'Pass external coding, ML-systems, applied-AI, and behavioral reviews'] },
   { id: 4, name: 'Frontier-Lab Interview Loop', startDay: 64, endDay: 70, exitCriteria: ['Complete a realistic full loop with external interviewers', 'Present one flagship artifact with reproducible technical evidence', 'Explain failures, tradeoffs, safety, and impact with precision'] },
 ];
 
@@ -29,10 +29,10 @@ export const FRONTIER_DAILY_FOCUS: Focus[] = [
   { topic: 'Model-service observability: traces, prompt versions, tool calls, latency, cost, and outcomes', track: 'ai_infra', mode: 'primary' },
   { topic: 'Customer and researcher discovery: turn a vague need into a testable technical question', track: 'applied_ai', mode: 'primary' },
   { topic: 'Read a recent ML-systems paper and reconstruct its claim, method, evidence, and limitations', track: 'ai_infra', mode: 'primary' },
-  { topic: 'Engineering communication and review: critique a real patch for correctness, tests, efficiency, clarity, and operability', track: 'sd', mode: 'primary' },
+  { topic: 'AI-native engineering: author a Markdown spec/ADR and YAML config, delegate a bounded change, then review the agent-generated PR with production rigor', track: 'sd', mode: 'primary' },
   { topic: 'Phase review: coding, AI prototype, systems fundamentals, experiment critique, and behavioral', track: 'sd', mode: 'primary' },
   { topic: 'PyTorch internals: tensors, autograd, training loop, checkpointing, and numerical stability', track: 'ai_infra', mode: 'primary' },
-  { topic: 'GPU performance model: memory hierarchy, arithmetic intensity, kernels, fusion, and profiling', track: 'ai_infra', mode: 'primary' },
+  { topic: 'C++/GPU performance path: memory ownership, profiling, memory hierarchy, kernels, fusion, and Python boundaries', track: 'ai_infra', mode: 'primary' },
   { topic: 'Inference mechanics: KV cache, batching, decoding, quantization, and latency/throughput tradeoffs', track: 'ai_infra', mode: 'primary' },
   { topic: 'Model serving: scheduling, admission control, cancellation, fallbacks, quotas, and SLOs', track: 'ai_infra', mode: 'primary' },
   { topic: 'ML data platforms: warehouses, ETL/ELT, batch and stream processing, lineage, quality, and contamination', track: 'ai_infra', mode: 'primary' },
@@ -43,12 +43,12 @@ export const FRONTIER_DAILY_FOCUS: Focus[] = [
   { topic: 'Post-training foundations: preference data, reward models, DPO/PPO concepts, and policy evaluation', track: 'ai_infra', mode: 'primary' },
   { topic: 'Model evaluations: deterministic checks, model graders, human review, agreement, and validity', track: 'applied_ai', mode: 'primary' },
   { topic: 'Production safety: threat models, prompt injection, sandboxing, least privilege, auditability, and escalation', track: 'sd', mode: 'primary' },
-  { topic: 'Full-stack cloud AI product: React/TypeScript UI, Python service, durable state, auth, managed data, and deployment', track: 'applied_ai', mode: 'primary' },
+  { topic: 'Accessible full-stack cloud AI product: keyboard and screen-reader UX, React/TypeScript UI, Python service, auth, data, and deployment', track: 'applied_ai', mode: 'primary' },
   { topic: 'Weekend build: deploy the product with evals, traces, tenant isolation, and usage metering', track: 'applied_ai', mode: 'primary' },
   { topic: 'Deployment operations: environments, migrations, feature flags, canaries, rollbacks, and runbooks', track: 'sd', mode: 'primary' },
   { topic: 'Performance lab: improve quality, p95 latency, throughput, and cost as a measured frontier', track: 'ai_infra', mode: 'primary' },
   { topic: 'Incident simulation: degraded model, corrupt data, or failing tool during a high-stakes launch', track: 'sd', mode: 'primary' },
-  { topic: 'Developer platforms: API and SDK design, plugin lifecycle, compatibility, documentation, and versioning', track: 'applied_ai', mode: 'primary' },
+  { topic: 'Developer platforms and AI-native SDLC: APIs, SDKs, plugin lifecycle, agent-consumable specs, compatibility, documentation, and versioning', track: 'applied_ai', mode: 'primary' },
   { topic: 'Client-facing architecture workshop: teach model, data, cloud, safety, and product tradeoffs through a working example', track: 'sd', mode: 'primary' },
   { topic: 'Reproduce a published result and run one ablation that tests the proposed explanation', track: 'ai_infra', mode: 'primary' },
   { topic: 'Phase panel: evaluated system, reproducible experiment, operations evidence, and external critique', track: 'sd', mode: 'primary' },
