@@ -8,7 +8,7 @@ export type Phase = {
   exitCriteria: string[];
 };
 
-export type Track = 'sd' | 'ai_infra';
+export type Track = 'sd' | 'ai_infra' | 'applied_ai';
 export type Mode = 'primary' | 'maintenance';
 export type MockType = 'coding' | 'sd' | 'behavioral' | 'full_loop';
 

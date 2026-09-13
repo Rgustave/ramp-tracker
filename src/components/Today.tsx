@@ -74,7 +74,7 @@ export function Today({ dayIndex }: Props) {
   const dsaResourceKeys = todayPlan.targets.dsa.patterns.map((p) => `dsa.${p}`);
   const sdResourceKey = todayPlan.targets.sdOrAi.resourceKey;
 
-  const trackBadge = todayPlan.targets.sdOrAi.track === 'ai_infra' ? 'AI Infra' : 'System Design';
+  const trackBadge = todayPlan.targets.sdOrAi.track === 'applied_ai' ? 'Applied AI' : todayPlan.targets.sdOrAi.track === 'ai_infra' ? 'AI Infra' : 'System Design';
   const frontier = frontierWeekFor(todayPlan.weekIndex);
 
   return (
@@ -138,7 +138,7 @@ export function Today({ dayIndex }: Props) {
             `Mode: ${todayPlan.targets.sdOrAi.mode}`,
           ]}
           resourceKeys={sdResourceKey ? [sdResourceKey] : []}
-          actionLabel="+ Design"
+          actionLabel="+ Session"
           onAction={() => setShowSD(true)}
         />
         <TargetCard

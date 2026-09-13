@@ -36,9 +36,9 @@ export function PlanView({ currentDayIndex }: Props) {
           {FRONTIER_WEEKS.map((item) => <div key={item.week} className="bg-zinc-950 p-4"><div className="font-mono text-[10px] text-amber-400">W{String(item.week).padStart(2, '0')}</div><div className="mt-2 text-sm font-semibold leading-5 text-white">{item.theme}</div><div className="mt-2 text-[11px] leading-4 text-zinc-500">{item.study.slice(0, 2).join(' · ')}</div></div>)}
         </div>
         <div className="mt-5 grid grid-cols-2 gap-3 border-t border-zinc-800 pt-5 sm:grid-cols-5">
-          {[['5h', 'Coding'], ['7h', 'Mission build'], ['4h', 'ML + systems'], ['3h', 'Mocks + comms'], ['2h', 'Job pipeline']].map(([hours, label]) => <div key={label}><div className="font-mono text-lg font-bold text-white">{hours}</div><div className="text-[10px] font-semibold uppercase tracking-wider text-zinc-500">{label}</div></div>)}
+          {[['4h', 'Coding'], ['8h', 'Mission build'], ['4h', 'ML + systems'], ['3h', 'Mocks + comms'], ['2h', 'Job pipeline']].map(([hours, label]) => <div key={label}><div className="font-mono text-lg font-bold text-white">{hours}</div><div className="text-[10px] font-semibold uppercase tracking-wider text-zinc-500">{label}</div></div>)}
         </div>
-        <p className="mt-4 text-xs leading-5 text-zinc-400"><strong className="text-zinc-200">Scope:</strong> optimized for strong software engineers targeting research-engineering, ML-systems, or inference-infrastructure roles. Research-scientist roles generally require a different publication-heavy path.</p>
+        <p className="mt-4 text-xs leading-5 text-zinc-400"><strong className="text-zinc-200">Scope:</strong> a common frontier-lab core spanning applied AI, research engineering, ML systems, inference infrastructure, evaluations/safety, and customer-facing technical delivery. Choose one primary lane in Week 7 while retaining adjacent fluency.</p>
       </section>
 
       <div className="space-y-4">
@@ -153,7 +153,7 @@ function DayDetailModal({ selectedDayIndex, onClose }: { selectedDayIndex: numbe
           </div>
           <div className="space-y-2">
             <div className="text-xs uppercase tracking-wider text-zinc-500">
-              {day.targets.sdOrAi.track === 'ai_infra' ? 'AI Infra' : 'System Design'} ({day.targets.sdOrAi.mode})
+              {day.targets.sdOrAi.track === 'applied_ai' ? 'Applied AI' : day.targets.sdOrAi.track === 'ai_infra' ? 'AI Infra' : 'System Design'} ({day.targets.sdOrAi.mode})
             </div>
             <div className="text-zinc-800 dark:text-zinc-200">{day.targets.sdOrAi.topic}</div>
             <ResourceList keys={sdResourceKey ? [sdResourceKey] : []} variant="compact" />

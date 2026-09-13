@@ -62,8 +62,8 @@ export function EndOfDayModal({ open, onClose, dayIndex, todayPlan, existing }: 
     },
     {
       key: 'ai',
-      label: 'AI Infra',
-      show: !todayPlan || todayPlan.targets.sdOrAi.track === 'ai_infra',
+      label: 'Applied AI / ML',
+      show: !todayPlan || todayPlan.targets.sdOrAi.track === 'ai_infra' || todayPlan.targets.sdOrAi.track === 'applied_ai',
     },
     { key: 'frontier', label: 'Frontier mission', show: true },
     { key: 'behavioral', label: 'Behavioral', show: true },

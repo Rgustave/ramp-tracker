@@ -77,6 +77,7 @@ export function SDLogModal({ open, onClose, dayIndex, todayPlan }: Props) {
             <Select value={track} onChange={(e) => setTrack(e.target.value as Track)}>
               <option value="sd">System Design</option>
               <option value="ai_infra">AI Infra</option>
+              <option value="applied_ai">Applied AI</option>
             </Select>
           </Field>
           <Field label="Duration (min)">
