@@ -70,10 +70,11 @@ export function WeekReview({ dayIndex }: Props) {
   const [reflection, setReflection] = useState('');
 
   return (
-    <div className="mx-auto max-w-4xl space-y-5 p-4 sm:p-6">
+    <div className="mx-auto max-w-6xl space-y-6 p-4 sm:p-6 lg:py-8">
       <div>
-        <h1 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100">Week review</h1>
-        <p className="text-sm text-zinc-600 dark:text-zinc-400">Rolling 7-day window. Honesty over kindness.</p>
+        <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-amber-600">Performance</div>
+        <h1 className="mt-1 text-3xl font-bold tracking-tight text-zinc-950 dark:text-white">Seven-day review</h1>
+        <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">A rolling view of pace, consistency, and weak signals.</p>
       </div>
 
       <Card>

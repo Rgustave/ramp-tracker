@@ -19,7 +19,7 @@ export function Button({
   };
   const variants: Record<string, string> = {
     default:
-      'bg-indigo-600 text-white shadow-sm shadow-indigo-600/20 hover:bg-indigo-500 hover:shadow-md hover:shadow-indigo-600/20',
+      'bg-zinc-950 text-white shadow-sm hover:bg-zinc-800 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200',
     outline:
       'border border-zinc-300 bg-transparent text-zinc-900 hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-100 dark:hover:bg-zinc-800',
     ghost:
@@ -35,7 +35,7 @@ export function Card({ className, children }: { className?: string; children: Re
   return (
     <div
       className={cn(
-        'rounded-2xl border border-zinc-200/80 bg-white/90 shadow-[0_1px_2px_rgba(15,23,42,.04),0_10px_30px_rgba(15,23,42,.04)] backdrop-blur dark:border-zinc-800 dark:bg-zinc-900/70 dark:shadow-[0_16px_50px_rgba(0,0,0,.18)]',
+        'rounded-xl border border-zinc-200 bg-white shadow-[0_1px_2px_rgba(15,23,42,.04)] dark:border-zinc-800 dark:bg-zinc-900 dark:shadow-none',
         className
       )}
     >

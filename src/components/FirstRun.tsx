@@ -17,10 +17,12 @@ export function FirstRun({ onDone }: Props) {
   }
 
   return (
-    <div className="mx-auto flex min-h-full max-w-md items-center p-6">
-      <Card className="w-full">
+    <div className="mx-auto flex min-h-full max-w-lg items-center p-6">
+      <Card className="w-full overflow-hidden">
+        <div className="h-1.5 bg-amber-400" />
         <CardHeader>
-          <CardTitle>Ramp Tracker · 70 days</CardTitle>
+          <div className="mb-5 grid h-10 w-10 place-items-center rounded-xl bg-zinc-950 text-xs font-black text-white dark:bg-white dark:text-zinc-950">R70</div>
+          <CardTitle className="text-2xl">Your interview ramp starts here.</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <p className="text-sm text-zinc-600 dark:text-zinc-400">

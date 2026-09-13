@@ -77,11 +77,11 @@ export function Today({ dayIndex }: Props) {
 
   return (
     <div className="mx-auto max-w-6xl space-y-6 p-4 sm:p-6 lg:py-8">
-      <section className="overflow-hidden rounded-3xl border border-indigo-500/15 bg-gradient-to-br from-indigo-600 via-indigo-600 to-violet-700 p-6 text-white shadow-2xl shadow-indigo-900/15 sm:p-8">
+      <section className="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-950 p-6 text-white shadow-sm sm:p-8 dark:border-zinc-700">
       <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <div className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-indigo-200">{today} · Phase {todayPlan.phaseId}</div>
-          <h1 className="max-w-2xl text-3xl font-black leading-tight tracking-[-0.035em] text-white sm:text-4xl">
+          <div className="mb-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-zinc-400">{today} / Phase {todayPlan.phaseId}</div>
+          <h1 className="max-w-2xl text-3xl font-bold leading-tight tracking-[-0.025em] text-white sm:text-[2.5rem]">
             Day {dayIndex}: {phase?.name ?? `Phase ${todayPlan.phaseId}`}
           </h1>
           <div className="mt-1 flex flex-wrap gap-2">
@@ -91,14 +91,14 @@ export function Today({ dayIndex }: Props) {
             {dayLog?.completed ? <Badge tone="success">Day complete</Badge> : null}
           </div>
         </div>
-        <div className="min-w-32 rounded-2xl border border-white/15 bg-white/10 p-4 text-left backdrop-blur sm:text-right">
-          <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-indigo-200">Logged today</div>
+        <div className="min-w-32 border-l border-zinc-700 pl-5 text-left sm:text-right">
+          <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-zinc-500">Logged today</div>
           <div className="mt-1 font-mono text-3xl font-bold text-white">
             {hh}h {String(mm).padStart(2, '0')}m
           </div>
         </div>
       </div>
-      <div className="mt-6 h-1.5 overflow-hidden rounded-full bg-black/15"><div className="h-full rounded-full bg-white" style={{width: `${Math.round(dayIndex / 70 * 100)}%`}} /></div>
+      <div className="mt-6 h-1 overflow-hidden rounded-full bg-zinc-800"><div className="h-full rounded-full bg-amber-400" style={{width: `${Math.round(dayIndex / 70 * 100)}%`}} /></div>
       </section>
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">

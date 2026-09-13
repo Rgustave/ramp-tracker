@@ -19,10 +19,11 @@ export function PlanView({ currentDayIndex }: Props) {
   const [selected, setSelected] = useState<number | null>(null);
 
   return (
-    <div className="mx-auto max-w-5xl space-y-5 p-4 sm:p-6">
+    <div className="mx-auto max-w-6xl space-y-6 p-4 sm:p-6 lg:py-8">
       <div>
-        <h1 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100">Plan · 70-day timeline</h1>
-        <p className="text-sm text-zinc-600 dark:text-zinc-400">Read-only. Tap a day for details.</p>
+        <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-amber-600">Curriculum</div>
+        <h1 className="mt-1 text-3xl font-bold tracking-tight text-zinc-950 dark:text-white">The 70-day plan</h1>
+        <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Four phases. Select any day to inspect the work.</p>
       </div>
 
       <div className="space-y-4">

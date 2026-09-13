@@ -64,7 +64,7 @@ export default function App() {
         onBack={goBack}
         onOpenSettings={() => setShowSettings(true)}
       />
-      <main>
+      <main className="pb-24 sm:pb-0">
         {view === 'today' && <Today dayIndex={dayIndex} />}
         {view === 'week' && <WeekReview dayIndex={dayIndex} />}
         {view === 'plan' && <PlanView currentDayIndex={dayIndex} />}

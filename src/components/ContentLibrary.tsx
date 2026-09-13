@@ -56,9 +56,9 @@ export function ContentLibrary() {
 
   return (
     <div className="mx-auto max-w-6xl space-y-7 p-4 sm:p-6 lg:py-8">
-      <section className="rounded-3xl border border-zinc-200/80 bg-white/80 p-6 shadow-xl shadow-zinc-900/[.04] backdrop-blur sm:p-8 dark:border-zinc-800 dark:bg-zinc-900/70">
+      <section className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm sm:p-8 dark:border-zinc-800 dark:bg-zinc-900">
         <Badge tone="info">Knowledge base</Badge>
-        <h1 className="mt-4 max-w-3xl text-3xl font-black tracking-[-0.04em] text-zinc-950 sm:text-5xl dark:text-white">Know the words. Explain the tradeoffs.</h1>
+        <h1 className="mt-4 max-w-3xl text-3xl font-bold tracking-[-0.03em] text-zinc-950 sm:text-4xl dark:text-white">Know the words. Explain the tradeoffs.</h1>
         <p className="mt-4 max-w-2xl text-base text-zinc-600 dark:text-zinc-400">A compact field guide for the concepts you are expected to use fluently in coding, architecture, AI infrastructure, agentic systems, and behavioral interviews.</p>
         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
           <label className="relative flex-1">
@@ -78,7 +78,7 @@ export function ContentLibrary() {
           <p className="max-w-md text-sm text-zinc-500 sm:text-right">Follow in order. Every resource ends with a portfolio-grade build, not a certificate.</p>
         </div>
         <div className="grid gap-4 lg:grid-cols-2">
-          {COURSES.map((course) => <a key={course.order} href={course.url} target="_blank" rel="noreferrer" className="group rounded-2xl border border-zinc-200/80 bg-white/90 p-5 shadow-[0_10px_30px_rgba(15,23,42,.04)] transition hover:-translate-y-0.5 hover:border-indigo-300 hover:shadow-xl hover:shadow-indigo-900/[.06] dark:border-zinc-800 dark:bg-zinc-900/70 dark:hover:border-indigo-700">
+          {COURSES.map((course) => <a key={course.order} href={course.url} target="_blank" rel="noreferrer" className="group rounded-xl border border-zinc-200 bg-white p-5 shadow-sm transition hover:border-zinc-400 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-zinc-600">
             <div className="flex items-start gap-4">
               <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-indigo-50 font-mono text-xs font-bold text-indigo-600 dark:bg-indigo-950 dark:text-indigo-300">{course.order}</div>
               <div className="min-w-0 flex-1"><div className="flex flex-wrap items-center gap-2"><h3 className="font-bold text-zinc-950 group-hover:text-indigo-600 dark:text-white dark:group-hover:text-indigo-300">{course.title} <span aria-hidden="true">↗</span></h3><span className="rounded-full bg-zinc-100 px-2 py-0.5 text-[10px] font-semibold text-zinc-500 dark:bg-zinc-800">{course.level}</span></div><div className="mt-1 text-xs font-semibold text-indigo-600 dark:text-indigo-400">{course.provider}</div></div>
