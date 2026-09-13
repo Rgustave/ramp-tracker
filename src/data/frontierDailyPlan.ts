@@ -1,7 +1,7 @@
 import type { Mode, Phase, Track } from '../types';
 
 export const FRONTIER_PHASES: Phase[] = [
-  { id: 1, name: 'Core Engineering & AI Fluency', startDay: 1, endDay: 21, exitCriteria: ['Solve medium coding problems clearly in 30–35 minutes', 'Build reliable Python and TypeScript AI prototypes with evals', 'Complete two externally reviewed baseline mocks'] },
+  { id: 1, name: 'Core Engineering & AI Fluency', startDay: 1, endDay: 21, exitCriteria: ['Solve medium coding problems clearly in 30–35 minutes', 'Build reliable Python and TypeScript AI prototypes with evals', 'Complete two substantive code reviews and two externally reviewed baseline mocks'] },
   { id: 2, name: 'ML Systems & Applied AI Depth', startDay: 22, endDay: 42, exitCriteria: ['Explain training and inference bottlenecks from model code to production service', 'Ship one evaluated, observable AI system with documented safety boundaries', 'Publish a reproducible experiment or open-source engineering artifact'] },
   { id: 3, name: 'Specialization & Integrated Delivery', startDay: 43, endDay: 63, exitCriteria: ['Demonstrate depth in one lane and working fluency across the others', 'Turn ambiguity into an experiment, system, or customer pilot with measurable outcomes', 'Pass external coding, ML-systems, applied-AI, and behavioral reviews'] },
   { id: 4, name: 'Frontier-Lab Interview Loop', startDay: 64, endDay: 70, exitCriteria: ['Complete a realistic full loop with external interviewers', 'Present one flagship artifact with reproducible technical evidence', 'Explain failures, tradeoffs, safety, and impact with precision'] },
@@ -29,7 +29,7 @@ export const FRONTIER_DAILY_FOCUS: Focus[] = [
   { topic: 'Model-service observability: traces, prompt versions, tool calls, latency, cost, and outcomes', track: 'ai_infra', mode: 'primary' },
   { topic: 'Customer and researcher discovery: turn a vague need into a testable technical question', track: 'applied_ai', mode: 'primary' },
   { topic: 'Read a recent ML-systems paper and reconstruct its claim, method, evidence, and limitations', track: 'ai_infra', mode: 'primary' },
-  { topic: 'Engineering communication: design note, experiment readout, incident write-up, and demo narrative', track: 'sd', mode: 'primary' },
+  { topic: 'Engineering communication and review: critique a real patch for correctness, tests, efficiency, clarity, and operability', track: 'sd', mode: 'primary' },
   { topic: 'Phase review: coding, AI prototype, systems fundamentals, experiment critique, and behavioral', track: 'sd', mode: 'primary' },
   { topic: 'PyTorch internals: tensors, autograd, training loop, checkpointing, and numerical stability', track: 'ai_infra', mode: 'primary' },
   { topic: 'GPU performance model: memory hierarchy, arithmetic intensity, kernels, fusion, and profiling', track: 'ai_infra', mode: 'primary' },
@@ -53,7 +53,7 @@ export const FRONTIER_DAILY_FOCUS: Focus[] = [
   { topic: 'Reproduce a published result and run one ablation that tests the proposed explanation', track: 'ai_infra', mode: 'primary' },
   { topic: 'Phase panel: evaluated system, reproducible experiment, operations evidence, and external critique', track: 'sd', mode: 'primary' },
   { topic: 'Choose a primary lane from evidence—not aspiration—and identify the two adjacent lanes to maintain', track: 'applied_ai', mode: 'maintenance' },
-  { topic: 'Coding under ambiguity: clarify requirements, test assumptions, implement, debug, and communicate', track: 'sd', mode: 'maintenance' },
+  { topic: 'Coding and review under ambiguity: clarify requirements, inspect an unfamiliar patch, test assumptions, debug, and communicate', track: 'sd', mode: 'maintenance' },
   { topic: 'Rapid applied-AI prototype: useful vertical slice from a four-hour product brief', track: 'applied_ai', mode: 'primary' },
   { topic: 'Behavioral mock: ownership, rigor, humility, conflict, and learning from failed work', track: 'sd', mode: 'maintenance' },
   { topic: 'Inference scheduler lab: continuous batching, cache capacity, fairness, and overload behavior', track: 'ai_infra', mode: 'primary' },
@@ -74,7 +74,7 @@ export const FRONTIER_DAILY_FOCUS: Focus[] = [
   { topic: 'Weekend full systems mock plus written self-review against a frontier-lab rubric', track: 'sd', mode: 'primary' },
   { topic: 'External panel: coding, specialization depth, cross-lane fluency, communication, and evidence', track: 'sd', mode: 'primary' },
   { topic: 'Repair the weakest technical signal identified by the external panel', track: 'ai_infra', mode: 'maintenance' },
-  { topic: 'Timed repository task: understand unfamiliar code, diagnose, implement, test, and explain', track: 'sd', mode: 'maintenance' },
+  { topic: 'Timed repository task: understand unfamiliar code, triage the issue across service/network/runtime layers, implement, review, test, and explain', track: 'sd', mode: 'maintenance' },
   { topic: 'Full mock loop: coding, ML/AI systems, research or product depth, and behavioral', track: 'sd', mode: 'maintenance' },
   { topic: 'Polish flagship artifact and rehearse the five-minute and twenty-minute technical narratives', track: 'applied_ai', mode: 'maintenance' },
   { topic: 'Company-specific preparation across target teams, recent work, role evidence, and questions', track: 'sd', mode: 'maintenance' },
