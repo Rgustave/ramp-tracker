@@ -64,6 +64,8 @@ export function WeekReview({ dayIndex }: Props) {
     last7Comm.length === 0 ? 0 : last7Comm.reduce((a, e) => a + e.selfRating, 0) / last7Comm.length;
   const commRecorded = last7Comm.filter((e) => e.recorded).length;
   const commMinutes = last7Comm.reduce((a, e) => a + e.durationMinutes, 0);
+  const frontierRatings = withinDays(dayLogs, 7).flatMap((entry) => entry.trackRatings.frontier ? [entry.trackRatings.frontier] : []);
+  const frontierAvg = frontierRatings.length ? frontierRatings.reduce((a, n) => a + n, 0) / frontierRatings.length : 0;
 
   const warnings = todayPlan ? detectDrift(todayPlan, logs) : [];
 
@@ -133,6 +135,11 @@ export function WeekReview({ dayIndex }: Props) {
           <Stat label="Recorded + reviewed" value={String(commRecorded)} />
           <Stat label="Avg clarity/pace" value={commAvgRating ? commAvgRating.toFixed(1) : '—'} />
           <Stat label="Minutes practiced" value={`${commMinutes}m`} />
+        </MetricCard>
+        <MetricCard title="Frontier mission">
+          <Stat label="Days rated" value={String(frontierRatings.length)} />
+          <Stat label="Avg execution" value={frontierAvg ? frontierAvg.toFixed(1) : '—'} hint="target ≥4.0" />
+          <p className="pt-2 text-xs leading-5 text-zinc-500">Rate shipped evidence, reproducibility, and technical depth—not effort.</p>
         </MetricCard>
       </div>
 

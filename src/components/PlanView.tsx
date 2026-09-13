@@ -5,6 +5,7 @@ import { PLAN } from '../data/seed';
 import type { DSAEntry, SDEntry, BehavioralEntry, MockEntry, DayLog } from '../types';
 import { Badge, Card, CardContent, CardHeader, CardTitle, Modal } from './ui/primitives';
 import { ResourceList } from './ResourceList';
+import { FRONTIER_WEEKS } from '../data/frontier';
 
 const PHASE_TONES: Record<number, 'success' | 'info' | 'warn' | 'danger'> = {
   1: 'info',
@@ -25,6 +26,20 @@ export function PlanView({ currentDayIndex }: Props) {
         <h1 className="mt-1 text-3xl font-bold tracking-tight text-zinc-950 dark:text-white">The 70-day plan</h1>
         <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Four phases. Select any day to inspect the work.</p>
       </div>
+
+      <section className="rounded-xl border border-zinc-800 bg-zinc-950 p-5 text-white sm:p-6">
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+          <div><div className="text-[10px] font-bold uppercase tracking-[0.18em] text-amber-400">Frontier-lab layer</div><h2 className="mt-1 text-xl font-bold">Ten proofs of engineering depth</h2></div>
+          <p className="max-w-md text-xs leading-5 text-zinc-400">The weekly mission replaces one design block and part of the weekend review. It is not additional work.</p>
+        </div>
+        <div className="mt-5 grid gap-px overflow-hidden rounded-lg border border-zinc-800 bg-zinc-800 sm:grid-cols-2 lg:grid-cols-5">
+          {FRONTIER_WEEKS.map((item) => <div key={item.week} className="bg-zinc-950 p-4"><div className="font-mono text-[10px] text-amber-400">W{String(item.week).padStart(2, '0')}</div><div className="mt-2 text-sm font-semibold leading-5 text-white">{item.theme}</div><div className="mt-2 text-[11px] leading-4 text-zinc-500">{item.study.slice(0, 2).join(' · ')}</div></div>)}
+        </div>
+        <div className="mt-5 grid grid-cols-2 gap-3 border-t border-zinc-800 pt-5 sm:grid-cols-5">
+          {[['5h', 'Coding'], ['7h', 'Mission build'], ['4h', 'ML + systems'], ['3h', 'Mocks + comms'], ['2h', 'Job pipeline']].map(([hours, label]) => <div key={label}><div className="font-mono text-lg font-bold text-white">{hours}</div><div className="text-[10px] font-semibold uppercase tracking-wider text-zinc-500">{label}</div></div>)}
+        </div>
+        <p className="mt-4 text-xs leading-5 text-zinc-400"><strong className="text-zinc-200">Scope:</strong> optimized for strong software engineers targeting research-engineering, ML-systems, or inference-infrastructure roles. Research-scientist roles generally require a different publication-heavy path.</p>
+      </section>
 
       <div className="space-y-4">
         {PLAN.phases.map((phase) => {

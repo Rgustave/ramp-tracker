@@ -12,7 +12,7 @@ type Props = {
   existing?: DayLog;
 };
 
-type RatingKey = 'dsa' | 'sd' | 'ai' | 'behavioral' | 'comm';
+type RatingKey = 'dsa' | 'sd' | 'ai' | 'frontier' | 'behavioral' | 'comm';
 type RatingState = Partial<Record<RatingKey, number>>;
 
 export function EndOfDayModal({ open, onClose, dayIndex, todayPlan, existing }: Props) {
@@ -65,6 +65,7 @@ export function EndOfDayModal({ open, onClose, dayIndex, todayPlan, existing }: 
       label: 'AI Infra',
       show: !todayPlan || todayPlan.targets.sdOrAi.track === 'ai_infra',
     },
+    { key: 'frontier', label: 'Frontier mission', show: true },
     { key: 'behavioral', label: 'Behavioral', show: true },
     { key: 'comm', label: 'Communication', show: true },
   ];

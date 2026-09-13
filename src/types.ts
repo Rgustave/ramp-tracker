@@ -104,7 +104,7 @@ export type DayLog = {
   date: ISODate;
   hoursLogged: number;
   completed: boolean;
-  trackRatings: { dsa?: number; sd?: number; ai?: number; behavioral?: number; comm?: number };
+  trackRatings: { dsa?: number; sd?: number; ai?: number; frontier?: number; behavioral?: number; comm?: number };
   notes?: string;
 };
 

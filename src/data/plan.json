@@ -8,7 +8,8 @@
       "exitCriteria": [
         "Mediums solvable in 30-35 minutes",
         "Can explain consistent hashing, caching strategies, CAP without notes",
-        "7 behavioral stories drafted and recorded once each"
+        "7 behavioral stories drafted and recorded once each",
+        "Two externally reviewed mocks completed; first baseline by Day 10"
       ]
     },
     {
@@ -20,7 +21,7 @@
         "Mediums in 25 minutes",
         "Can design an inference API end-to-end with batching/caching/routing tradeoffs",
         "10+ behavioral stories rehearsed, ready for any common stem",
-        "First mock interview completed"
+        "One reproducible ML-systems artifact published with measured results"
       ]
     },
     {
@@ -311,6 +312,9 @@
         },
         "behavioral": {
           "task": "Draft STAR outline for category: scaling"
+        },
+        "mock": {
+          "type": "coding"
         }
       }
     },
@@ -449,6 +453,9 @@
         },
         "behavioral": {
           "task": "Record yourself telling one story (under 2 min). Play back. Refine."
+        },
+        "mock": {
+          "type": "sd"
         }
       }
     },

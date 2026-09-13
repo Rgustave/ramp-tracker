@@ -12,6 +12,7 @@ import { MockLogModal } from './QuickLog/MockLogModal';
 import { CommLogModal } from './QuickLog/CommLogModal';
 import { EndOfDayModal } from './EndOfDayModal';
 import type { DayLog, DayPlan } from '../types';
+import { frontierWeekFor } from '../data/frontier';
 
 type Props = { dayIndex: number };
 
@@ -74,6 +75,7 @@ export function Today({ dayIndex }: Props) {
   const sdResourceKey = todayPlan.targets.sdOrAi.resourceKey;
 
   const trackBadge = todayPlan.targets.sdOrAi.track === 'ai_infra' ? 'AI Infra' : 'System Design';
+  const frontier = frontierWeekFor(todayPlan.weekIndex);
 
   return (
     <div className="mx-auto max-w-6xl space-y-6 p-4 sm:p-6 lg:py-8">
@@ -99,6 +101,21 @@ export function Today({ dayIndex }: Props) {
         </div>
       </div>
       <div className="mt-6 h-1 overflow-hidden rounded-full bg-zinc-800"><div className="h-full rounded-full bg-amber-400" style={{width: `${Math.round(dayIndex / 70 * 100)}%`}} /></div>
+      </section>
+
+      <section className="grid overflow-hidden rounded-xl border border-zinc-200 bg-white shadow-sm lg:grid-cols-[1.35fr_1fr] dark:border-zinc-800 dark:bg-zinc-900">
+        <div className="p-5 sm:p-6">
+          <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-amber-600">Week {frontier.week} frontier mission</div>
+          <h2 className="mt-2 text-xl font-bold tracking-tight text-zinc-950 dark:text-white">{frontier.theme}</h2>
+          <p className="mt-3 text-sm leading-6 text-zinc-600 dark:text-zinc-300">{frontier.mission}</p>
+          <div className="mt-4 rounded-lg bg-zinc-50 p-3 text-xs leading-5 text-zinc-600 dark:bg-zinc-950 dark:text-zinc-300"><strong className="text-zinc-900 dark:text-white">Proof:</strong> {frontier.proof}</div>
+        </div>
+        <div className="border-t border-zinc-200 bg-zinc-50 p-5 lg:border-l lg:border-t-0 dark:border-zinc-800 dark:bg-zinc-950/60">
+          <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-zinc-500">Exit gate</div>
+          <p className="mt-2 text-sm font-medium leading-6 text-zinc-800 dark:text-zinc-200">{frontier.gate}</p>
+          <div className="mt-4 text-[10px] font-bold uppercase tracking-[0.18em] text-zinc-500">Job pipeline</div>
+          <p className="mt-2 text-xs leading-5 text-zinc-600 dark:text-zinc-400">{frontier.pipeline}</p>
+        </div>
       </section>
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
