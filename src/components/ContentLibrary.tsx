@@ -68,11 +68,11 @@ export function ContentLibrary() {
           </label>
         </div>
         <div className="mt-4 flex flex-wrap gap-2" aria-label="Filter by track">
-          {TRACKS.map((item) => <button key={item} onClick={() => setTrack(item)} className={`rounded-full px-3 py-1.5 text-xs font-semibold transition ${track === item ? 'bg-indigo-600 text-white shadow-sm' : 'bg-zinc-100 text-zinc-600 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-300'}`}>{item}</button>)}
+          {TRACKS.map((item) => <button key={item} type="button" aria-pressed={track === item} onClick={() => setTrack(item)} className={`rounded-full px-3 py-1.5 text-xs font-semibold transition ${track === item ? 'bg-indigo-600 text-white shadow-sm' : 'bg-zinc-100 text-zinc-600 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-300'}`}>{item}</button>)}
         </div>
       </section>
 
-      <section className="space-y-4">
+      {(track === 'All' || track === 'Agentic AI') && <section className="space-y-4">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
           <div><div className="text-xs font-bold uppercase tracking-[0.18em] text-indigo-600 dark:text-indigo-400">Agentic AI learning path</div><h2 className="mt-1 text-2xl font-black tracking-tight text-zinc-950 dark:text-white">From agent demos to reliable systems</h2></div>
           <p className="max-w-md text-sm text-zinc-500 sm:text-right">Follow in order. Every resource ends with a portfolio-grade build, not a certificate.</p>
@@ -88,7 +88,7 @@ export function ContentLibrary() {
             <div className="mt-4 rounded-xl border border-indigo-100 bg-indigo-50/70 p-3 dark:border-indigo-900/70 dark:bg-indigo-950/40"><div className="text-[10px] font-bold uppercase tracking-[0.16em] text-indigo-600 dark:text-indigo-400">Build to prove it</div><p className="mt-1 text-xs leading-5 text-indigo-950 dark:text-indigo-100">{course.build}</p></div>
           </a>)}
         </div>
-      </section>
+      </section>}
 
       <div className="flex items-center justify-between"><h2 className="text-lg font-bold text-zinc-950 dark:text-white">Glossary</h2><span className="text-xs font-medium text-zinc-500">{results.length} concepts</span></div>
       {results.length ? <div className="grid gap-4 md:grid-cols-2">
