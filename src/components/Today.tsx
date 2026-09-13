@@ -76,29 +76,32 @@ export function Today({ dayIndex }: Props) {
   const trackBadge = todayPlan.targets.sdOrAi.track === 'ai_infra' ? 'AI Infra' : 'System Design';
 
   return (
-    <div className="mx-auto max-w-4xl space-y-5 p-4 sm:p-6">
-      <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+    <div className="mx-auto max-w-6xl space-y-6 p-4 sm:p-6 lg:py-8">
+      <section className="overflow-hidden rounded-3xl border border-indigo-500/15 bg-gradient-to-br from-indigo-600 via-indigo-600 to-violet-700 p-6 text-white shadow-2xl shadow-indigo-900/15 sm:p-8">
+      <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <div className="text-xs uppercase tracking-wider text-zinc-500">{today}</div>
-          <h1 className="text-2xl font-bold text-zinc-900 sm:text-3xl dark:text-zinc-100">
-            Day {dayIndex} of 70 — {phase?.name ?? `Phase ${todayPlan.phaseId}`}
+          <div className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-indigo-200">{today} · Phase {todayPlan.phaseId}</div>
+          <h1 className="max-w-2xl text-3xl font-black leading-tight tracking-[-0.035em] text-white sm:text-4xl">
+            Day {dayIndex}: {phase?.name ?? `Phase ${todayPlan.phaseId}`}
           </h1>
           <div className="mt-1 flex flex-wrap gap-2">
-            <Badge tone="info">Week {todayPlan.weekIndex}</Badge>
+            <span className="rounded-full border border-white/20 bg-white/10 px-2.5 py-1 text-xs font-semibold">Week {todayPlan.weekIndex}</span>
             {todayPlan.isWeekend ? <Badge tone="default">Weekend</Badge> : null}
             {todayPlan.targets.mock ? <Badge tone="warn">Mock today: {todayPlan.targets.mock.type}</Badge> : null}
             {dayLog?.completed ? <Badge tone="success">Day complete</Badge> : null}
           </div>
         </div>
-        <div className="text-right">
-          <div className="text-xs uppercase tracking-wider text-zinc-500">Logged</div>
-          <div className="font-mono text-2xl text-zinc-900 dark:text-zinc-100">
+        <div className="min-w-32 rounded-2xl border border-white/15 bg-white/10 p-4 text-left backdrop-blur sm:text-right">
+          <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-indigo-200">Logged today</div>
+          <div className="mt-1 font-mono text-3xl font-bold text-white">
             {hh}h {String(mm).padStart(2, '0')}m
           </div>
         </div>
       </div>
+      <div className="mt-6 h-1.5 overflow-hidden rounded-full bg-black/15"><div className="h-full rounded-full bg-white" style={{width: `${Math.round(dayIndex / 70 * 100)}%`}} /></div>
+      </section>
 
-      <div className="grid gap-4 md:grid-cols-2">
+      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
         <TargetCard
           title="DS&A"
           headerBadge={`${dsaCount}/${todayPlan.targets.dsa.problemCount}`}

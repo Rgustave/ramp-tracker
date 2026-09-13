@@ -11,7 +11,7 @@ export function Button({
   size?: 'sm' | 'md' | 'lg';
 }) {
   const base =
-    'inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-500 disabled:opacity-50 disabled:cursor-not-allowed';
+    'inline-flex items-center justify-center rounded-lg font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed active:translate-y-px';
   const sizes: Record<string, string> = {
     sm: 'h-8 px-3 text-sm',
     md: 'h-9 px-4 text-sm',
@@ -19,13 +19,13 @@ export function Button({
   };
   const variants: Record<string, string> = {
     default:
-      'bg-zinc-900 text-zinc-50 hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white',
+      'bg-indigo-600 text-white shadow-sm shadow-indigo-600/20 hover:bg-indigo-500 hover:shadow-md hover:shadow-indigo-600/20',
     outline:
       'border border-zinc-300 bg-transparent text-zinc-900 hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-100 dark:hover:bg-zinc-800',
     ghost:
       'bg-transparent text-zinc-700 hover:bg-zinc-100 dark:text-zinc-200 dark:hover:bg-zinc-800',
     subtle:
-      'bg-zinc-100 text-zinc-900 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700',
+      'border border-zinc-200 bg-white text-zinc-900 shadow-sm hover:-translate-y-0.5 hover:border-indigo-300 hover:text-indigo-700 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:border-indigo-500 dark:hover:text-indigo-300',
     danger: 'bg-red-600 text-white hover:bg-red-500',
   };
   return <button className={cn(base, sizes[size], variants[variant], className)} {...props} />;
@@ -35,7 +35,7 @@ export function Card({ className, children }: { className?: string; children: Re
   return (
     <div
       className={cn(
-        'rounded-lg border border-zinc-200 bg-white shadow-sm dark:border-zinc-800 dark:bg-zinc-900/60 dark:shadow-none dark:backdrop-blur',
+        'rounded-2xl border border-zinc-200/80 bg-white/90 shadow-[0_1px_2px_rgba(15,23,42,.04),0_10px_30px_rgba(15,23,42,.04)] backdrop-blur dark:border-zinc-800 dark:bg-zinc-900/70 dark:shadow-[0_16px_50px_rgba(0,0,0,.18)]',
         className
       )}
     >
@@ -49,7 +49,7 @@ export function CardHeader({ className, children }: { className?: string; childr
 }
 
 export function CardTitle({ className, children }: { className?: string; children: ReactNode }) {
-  return <h3 className={cn('text-lg font-semibold text-zinc-900 dark:text-zinc-100', className)}>{children}</h3>;
+  return <h3 className={cn('text-base font-bold tracking-tight text-zinc-950 dark:text-white', className)}>{children}</h3>;
 }
 
 export function CardContent({ className, children }: { className?: string; children: ReactNode }) {

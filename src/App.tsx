@@ -10,6 +10,7 @@ import { PlanView } from './components/PlanView';
 import { Stories } from './components/Stories';
 import { WeekReview } from './components/WeekReview';
 import { SettingsModal } from './components/SettingsModal';
+import { ContentLibrary } from './components/ContentLibrary';
 
 const LOADING = Symbol('loading');
 
@@ -68,6 +69,7 @@ export default function App() {
         {view === 'week' && <WeekReview dayIndex={dayIndex} />}
         {view === 'plan' && <PlanView currentDayIndex={dayIndex} />}
         {view === 'stories' && <Stories />}
+        {view === 'library' && <ContentLibrary />}
       </main>
       <SettingsModal
         open={showSettings}
