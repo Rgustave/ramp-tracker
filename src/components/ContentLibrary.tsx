@@ -63,6 +63,7 @@ const TRACKS: Track[] = ['All', 'DS&A', 'System Design', 'AI Infra', 'Agentic AI
 export function ContentLibrary() {
   const [query, setQuery] = useState('');
   const [track, setTrack] = useState<Track>('All');
+  const [expandedTerm, setExpandedTerm] = useState<string | null>(null);
   const results = useMemo(() => {
     const q = query.trim().toLowerCase();
     return ENTRIES.filter((entry) => (track === 'All' || entry.track === track) && (!q || `${entry.term} ${entry.definition} ${entry.signal}`.toLowerCase().includes(q)));
@@ -106,13 +107,42 @@ export function ContentLibrary() {
 
       <div className="flex items-center justify-between"><h2 className="text-lg font-bold text-zinc-950 dark:text-white">Glossary</h2><span className="text-xs font-medium text-zinc-500">{results.length} concepts</span></div>
       {results.length ? <div className="grid gap-4 md:grid-cols-2">
-        {results.map((entry) => <Card key={entry.term} className="group transition duration-200 hover:-translate-y-0.5 hover:border-indigo-300 hover:shadow-xl hover:shadow-indigo-900/[.06] dark:hover:border-indigo-700">
-          <CardContent className="pt-5">
-            <div className="flex items-start justify-between gap-3"><h3 className="text-lg font-bold tracking-tight text-zinc-950 dark:text-white">{entry.term}</h3><Badge tone={entry.track === 'AI Infra' || entry.track === 'Agentic AI' ? 'info' : entry.track === 'Behavioral' ? 'warn' : 'default'}>{entry.track}</Badge></div>
-            <p className="mt-3 text-sm leading-6 text-zinc-600 dark:text-zinc-300">{entry.definition}</p>
-            <div className="mt-4 border-t border-zinc-100 pt-4 dark:border-zinc-800"><div className="text-[10px] font-bold uppercase tracking-[0.18em] text-indigo-600 dark:text-indigo-400">Interview signal</div><p className="mt-1.5 text-sm text-zinc-700 dark:text-zinc-300">{entry.signal}</p></div>
-          </CardContent>
-        </Card>)}
+        {results.map((entry) => {
+          const expanded = expandedTerm === entry.term;
+          const detailId = `glossary-${entry.term.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+          return <Card key={entry.term} className={`group overflow-hidden transition duration-200 hover:-translate-y-0.5 hover:border-indigo-300 hover:shadow-xl hover:shadow-indigo-900/[.06] dark:hover:border-indigo-700 ${expanded ? 'border-indigo-300 ring-2 ring-indigo-500/10 dark:border-indigo-700' : ''}`}>
+            <button
+              type="button"
+              aria-expanded={expanded}
+              aria-controls={detailId}
+              onClick={() => setExpandedTerm(expanded ? null : entry.term)}
+              className="w-full cursor-pointer text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-indigo-500"
+            >
+              <CardContent className="pt-5">
+                <div className="flex items-start justify-between gap-3">
+                  <h3 className="text-lg font-bold tracking-tight text-zinc-950 transition group-hover:text-indigo-700 dark:text-white dark:group-hover:text-indigo-300">{entry.term}</h3>
+                  <div className="flex shrink-0 items-center gap-2">
+                    <Badge tone={entry.track === 'AI Infra' || entry.track === 'Agentic AI' ? 'info' : entry.track === 'Behavioral' ? 'warn' : 'default'}>{entry.track}</Badge>
+                    <span aria-hidden="true" className={`grid h-7 w-7 place-items-center rounded-full bg-zinc-100 text-sm text-zinc-500 transition-transform dark:bg-zinc-800 dark:text-zinc-300 ${expanded ? 'rotate-180' : ''}`}>⌄</span>
+                  </div>
+                </div>
+                <p className="mt-3 text-sm leading-6 text-zinc-600 dark:text-zinc-300">{entry.definition}</p>
+                <div className="mt-4 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.16em] text-indigo-600 dark:text-indigo-400">
+                  <span>{expanded ? 'Hide interview guidance' : 'Open interview guidance'}</span>
+                  <span aria-hidden="true">{expanded ? '↑' : '→'}</span>
+                </div>
+                {expanded ? <div id={detailId} className="mt-4 border-t border-zinc-100 pt-4 dark:border-zinc-800">
+                  <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-indigo-600 dark:text-indigo-400">Interview signal</div>
+                  <p className="mt-1.5 text-sm leading-6 text-zinc-700 dark:text-zinc-300">{entry.signal}</p>
+                  <div className="mt-4 rounded-lg bg-zinc-50 p-3 dark:bg-zinc-950">
+                    <div className="text-[10px] font-bold uppercase tracking-[0.16em] text-zinc-500">60-second drill</div>
+                    <p className="mt-1 text-xs leading-5 text-zinc-600 dark:text-zinc-400">Explain {entry.term} without jargon. Give one concrete use case, one failure mode, and one tradeoff.</p>
+                  </div>
+                </div> : null}
+              </CardContent>
+            </button>
+          </Card>;
+        })}
       </div> : <div className="rounded-2xl border border-dashed border-zinc-300 p-12 text-center text-sm text-zinc-500 dark:border-zinc-700">No concepts match your search.</div>}
     </div>
   );
